@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<AssociationGroupInformation>
+  <CommandClasses>
+    <CommandClass id="0xA4" name="Active Schedule">
+      <Command id="0x05" name="Active Schedule Enable Report" description="This command MUST be issued by a node when the schedule state for a target has been altered from any source, unless the schedule is enabled as the result of a successful Daily Repeating Schedule Set or Year Day Schedule Set."/>
+      <Command id="0x08" name="Active Schedule Year Day Schedule Report" description="This command MUST be issued by a node when schedule data has been altered from any source."/>
+      <Command id="0x0B" name="Active Schedule Daily Repeating Schedule Report" description="This command MUST be issued by a node when schedule data has been altered from any source."/>
+    </CommandClass>
+    <CommandClass id="0x66" name="Barrier Operator">
+      <Command id="0x03" name="Barrier Operator Report" description="This command MUST be issued by a node when the barrier has finished a transition (e.g. from Open to Close) and reached a final state"/>
+      <Command id="0x08" name="Barrier Operator Event Signaling Report" description="This command MUST be issued when a subsystem state has changed."/>
+    </CommandClass>
+    <CommandClass id="0x80" name="Battery">
+      <Command id="0x03" name="Battery Report" description="This command MUST be issued by a node in two different cases: periodically to report the current battery level where the frequency is up to the implementation, and when its battery becomes low and the end user needs to reload or replace the battery. The Battery Level field MUST be set to 0xFF to indicate a low battery warning."/>
+    </CommandClass>
+    <CommandClass id="0x5B" name="Central Scene">
+      <Command id="0x03" name="Central Scene Notification" description="This command MUST be issued by a node when a user actuated a Scene Notification button/method on the supporting node."/>
+      <Command id="0x06" name="Central Scene Configuration Report" description="This command MUST be issued by a node when its Central Scene Configuration has changed."/>
+    </CommandClass>
+    <CommandClass id="0x81" name="Clock">
+      <Command id="0x06" name="Clock Report" description="This command MUST be issued when the clock setting has been modified."/>
+    </CommandClass>
+    <CommandClass id="0x5A" name="Device Reset Locally">
+      <Command id="0x01" name="Device Reset Locally Notification" description="This command MUST be issued by a node when it has been locally or manually reset to factory default."/>
+    </CommandClass>
+    <CommandClass id="0x62" name="Door Lock">
+      <Command id="0x03" name="Door Lock Operation Report" description="This command MUST be issued by a node when it has completed a lock/unlock operation initiated locally."/>
+      <Command id="0x06" name="Door Lock Configuration Report" description="This command MUST be issued by when the Door Lock configuration has changed."/>
+    </CommandClass>
+    <CommandClass id="0x6F" name="Entry Control">
+      <Command id="0x01" name="Entry Control Notification" description="This command MUST be issued by a node when a user input has exceeded key cache size or key cache timeout."/>
+    </CommandClass>
+    <CommandClass id="0x87" name="Indicator">
+      <Command id="0x03" name="Indicator Report" description="This command SHOULD be issued when an indicator property has changed."/>
+    </CommandClass>
+    <CommandClass id="0x6B" name="Irrigation">
+      <Command id="0x04" name="Irrigation System Status Report" description="This command MUST be issued when a system error has occured."/>
+    </CommandClass>
+    <CommandClass id="0x32" name="Meter">
+      <Command id="0x02" name="Meter Report" description="This command MUST be issued periodically to report the current Meter reading. The sending frequency is up to the implementation. It is RECOMMENDED to implement a minimum reporting interval (for example, every 70 minutes) and send additional reports when a measurement variation occurred. A node supporting multiple meter types MUST advertise readings for all of the supported types via the Lifeline Group. Each meter type MAY have a different timing mechanism for reporting its readings."/>
+    </CommandClass>
+    <CommandClass id="0x71" name="Notification">
+      <Command id="0x05" name="Notification Report" description="This command MUST be issued by Push nodes every time a new event is detected or when a state variable has changed state."/>
+    </CommandClass>
+    <CommandClass id="0x31" name="Sensor Multilevel">
+      <Command id="0x05" name="Sensor Multilevel Report" description="This command MUST be issued periodically to report the current Multilevel sensor reading. The sending frequency is up to the implementation. It is RECOMMENDED to implement a minimum reporting interval (for example, every 70 minutes) and send additional reports when a measurement variation occurred. A node supporting multiple sensor types MUST advertise readings for all of the supported types via the Lifeline Group. Each sensor type MAY have a different timing mechanism for reporting its readings."/>
+    </CommandClass>
+    <CommandClass id="0x79" name="Sound Switch">
+      <Command id="0x07" name="Sound Switch Configuration Report" description="This command MUST be issued when volume or default tone has changed."/>
+      <Command id="0x0A" name="Sound Switch Tone Play Report" description="This command MUST be issued when a tone has started playing."/>
+    </CommandClass>
+    <CommandClass id="0x25" name="Switch Binary">
+      <Command id="0x03" name="Switch Binary Report" description="This command MUST be issued when the binary switch value has changed (and reached a final state)"/>
+    </CommandClass>
+    <CommandClass id="0x33" name="Switch Color">
+      <Command id="0x04" name="Switch Color Report" description="This command MUST be issued when a color component level has changed."/>
+    </CommandClass>
+    <CommandClass id="0x26" name="Switch Multilevel">
+      <Command id="0x03" name="Switch Multilevel Report" description="This command MUST be issued when the multilevel switch value has changed (and reached a final state)"/>
+    </CommandClass>
+    <CommandClass id="0x40" name="Thermostat Mode">
+      <Command id="0x03" name="Thermostat Mode Report" description="This command MUST be issued when the Thermostat Mode has changed."/>
+    </CommandClass>
+    <CommandClass id="0x47" name="Thermostat Setback">
+      <Command id="0x03" name="Thermostat Setback Report" description="This command MUST be issued when the Thermostat Setback has changed."/>
+    </CommandClass>
+    <CommandClass id="0x43" name="Thermostat Setpoint">
+      <Command id="0x03" name="Thermostat Setpoint Report" description="This command MUST be issued when the Thermostat Setpoint setting has changed."/>
+    </CommandClass>
+    <CommandClass id="0x63" name="User Code">
+      <Command id="0x03" name="User Code Report" description="This command MUST be issued when a User Code record is modified."/>
+      <Command id="0x05" name="Users Number Report" description="This command MUST be issued when the number of supported User Code CC Users (i.e. User Codes) has changed via migration."/>
+      <Command id="0x0A" name="User Code Keypad Mode Report" description="This command MUST be issued when the Keypad Mode has been modified."/>
+      <Command id="0x10" name="Admin Code Report" description="This command MUST be issued when the Admin Code has been modified."/>
+      <Command id="0x0D" name="Extended User Code Report" description="This command MUST be issued when a User Code record with user identifier &gt; 255 has been modified."/>
+    </CommandClass>
+    <CommandClass id="0x83" name="User Credential">
+      <Command id="0x02" name="User Capabilities Report" description="This command MUST be issued when the number of supported User Credential CC Users has changed via migration."/>
+      <Command id="0x07" name="User Report" description="This command MUST be issued when a User Credential - User record is modified."/>
+      <Command id="0x0C" name="Credential Report" description="This command MUST be issued when a User Credential - Credential record is modified."/>
+      <Command id="0x13" name="User Credential Association Report" description="This command MUST be issued when an existing credential is successfully reassigned to another user."/>
+      <Command id="0x1C" name="Admin Pin Code Report" description="This command MUST be issued when the admin code has been modified."/>
+      <Command id="0x21" name="Key Locker Entry Report" description="This command MUST be issued when a key locker entry has been modified."/>
+    </CommandClass>
+    <CommandClass id="0x86" name="Version">
+      <Command id="0x1D" name="Migration Report" description="This command MUST be issued when a migration operation changes state – for instance, if an operation starts, completes or is no longer valid."/>
+    </CommandClass>
+    <CommandClass id="0x6A" name="Window Covering">
+      <Command id="0x04" name="Window Covering Report" description="This command MUST be issued when a Parameter ID has changed value."/>
+    </CommandClass>
+  </CommandClasses>
+</AssociationGroupInformation>

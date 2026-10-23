@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+SPDX-License-Identifier: BSD-3-Clause
+SPDX-FileCopyrightText: 2025 Z-Wave-Alliance <https://z-wavealliance.org/>
+-->
+<SimpleAV>
+  <Commands>
+    <Command dec="1" hex="0x0001" label="Mute" description="" version="1"/>
+    <Command dec="2" hex="0x0002" label="Volume Down" description="Level Down" version="1"/>
+    <Command dec="3" hex="0x0003" label="Volume Up" description="Level Up" version="1"/>
+    <Command dec="4" hex="0x0004" label="Channel Up" description="Program Up" version="1"/>
+    <Command dec="5" hex="0x0005" label="Channel Down" description="Program Down" version="1"/>
+    <Command dec="6" hex="0x0006" label="0" description="Preset 10" version="1"/>
+    <Command dec="7" hex="0x0007" label="1" description="Preset 1" version="1"/>
+    <Command dec="8" hex="0x0008" label="2" description="Preset 2" version="1"/>
+    <Command dec="9" hex="0x0009" label="3" description="Preset 3" version="1"/>
+    <Command dec="10" hex="0x000A" label="4" description="Preset 4" version="1"/>
+    <Command dec="11" hex="0x000B" label="5" description="Preset 5" version="1"/>
+    <Command dec="12" hex="0x000C" label="6" description="Preset 6" version="1"/>
+    <Command dec="13" hex="0x000D" label="7" description="Preset 7" version="1"/>
+    <Command dec="14" hex="0x000E" label="8" description="Preset 8" version="1"/>
+    <Command dec="15" hex="0x000F" label="9" description="Preset 9" version="1"/>
+    <Command dec="16" hex="0x0010" label="Last Channel" description="Recall, Previous Channel (WMC)" version="1"/>
+    <Command dec="17" hex="0x0011" label="Display" description="Info" version="1"/>
+    <Command dec="18" hex="0x0012" label="Favorite Channel" description="Favorite" version="1"/>
+    <Command dec="19" hex="0x0013" label="Play" description="" version="1"/>
+    <Command dec="20" hex="0x0014" label="Stop" description="" version="1"/>
+    <Command dec="21" hex="0x0015" label="Pause" description="Still" version="1"/>
+    <Command dec="22" hex="0x0016" label="Fast Forward" description="Search Forward" version="1"/>
+    <Command dec="23" hex="0x0017" label="Rewind" description="Search Reverse" version="1"/>
+    <Command dec="24" hex="0x0018" label="Instant Replay" description="Replay" version="1"/>
+    <Command dec="25" hex="0x0019" label="Record" description="" version="1"/>
+    <Command dec="26" hex="0x001A" label="AC3" description="Dolby Digital" version="1"/>
+    <Command dec="27" hex="0x001B" label="PVR Menu" description="Tivo" version="1"/>
+    <Command dec="28" hex="0x001C" label="Guide" description="EPG" version="1"/>
+    <Command dec="29" hex="0x001D" label="Menu" description="Settings" version="1"/>
+    <Command dec="30" hex="0x001E" label="Menu Up" description="Adjust Up" version="1"/>
+    <Command dec="31" hex="0x001F" label="Menu Down" description="Adjust Down" version="1"/>
+    <Command dec="32" hex="0x0020" label="Menu Left" description="Cursor Left" version="1"/>
+    <Command dec="33" hex="0x0021" label="Menu Right" description="Cursor Right" version="1"/>
+    <Command dec="34" hex="0x0022" label="Page Up" description="" version="1"/>
+    <Command dec="35" hex="0x0023" label="Page Down" description="" version="1"/>
+    <Command dec="36" hex="0x0024" label="Select" description="OK" version="1"/>
+    <Command dec="37" hex="0x0025" label="Exit" description="" version="1"/>
+    <Command dec="38" hex="0x0026" label="Input" description="Input Select" version="1"/>
+    <Command dec="39" hex="0x0027" label="Power" description="Standby" version="1"/>
+    <Command dec="40" hex="0x0028" label="Enter Channel" description="Channel Enter" version="1"/>
+    <Command dec="41" hex="0x0029" label="10" description="" version="1"/>
+    <Command dec="42" hex="0x002A" label="11" description="" version="1"/>
+    <Command dec="43" hex="0x002B" label="12" description="" version="1"/>
+    <Command dec="44" hex="0x002C" label="13" description="" version="1"/>
+    <Command dec="45" hex="0x002D" label="14" description="" version="1"/>
+    <Command dec="46" hex="0x002E" label="15" description="" version="1"/>
+    <Command dec="47" hex="0x002F" label="16" description="" version="1"/>
+    <Command dec="48" hex="0x0030" label="10" description="10+" version="1"/>
+    <Command dec="49" hex="0x0031" label="20" description="20+" version="1"/>
+    <Command dec="50" hex="0x0032" label="100" description="" version="1"/>
+    <Command dec="51" hex="0x0033" label="-/--" description="" version="1"/>
+    <Command dec="52" hex="0x0034" label="3-CH" description="" version="1"/>
+    <Command dec="53" hex="0x0035" label="3D" description="Simulated Stereo" version="1"/>
+    <Command dec="54" hex="0x0036" label="6-CH Input" description="6 Channel" version="1"/>
+    <Command dec="55" hex="0x0037" label="A" description="" version="1"/>
+    <Command dec="56" hex="0x0038" label="Add" description="Write" version="1"/>
+    <Command dec="57" hex="0x0039" label="Alarm" description="" version="1"/>
+    <Command dec="58" hex="0x003A" label="AM" description="" version="1"/>
+    <Command dec="59" hex="0x003B" label="Analog" description="" version="1"/>
+    <Command dec="60" hex="0x003C" label="Angle" description="" version="1"/>
+    <Command dec="61" hex="0x003D" label="Antenna" description="External" version="1"/>
+    <Command dec="62" hex="0x003E" label="Antenna East" description="" version="1"/>
+    <Command dec="63" hex="0x003F" label="Antenna West" description="" version="1"/>
+    <Command dec="64" hex="0x0040" label="Aspect" description="Size" version="1"/>
+    <Command dec="65" hex="0x0041" label="Audio 1" description="Audio" version="1"/>
+    <Command dec="66" hex="0x0042" label="Audio 2" description="" version="1"/>
+    <Command dec="67" hex="0x0043" label="Audio 3" description="" version="1"/>
+    <Command dec="68" hex="0x0044" label="Audio Dubbing" description="" version="1"/>
+    <Command dec="69" hex="0x0045" label="Audio Level Down" description="" version="1"/>
+    <Command dec="70" hex="0x0046" label="Audio Level Up" description="" version="1"/>
+    <Command dec="71" hex="0x0047" label="Auto/Manual" description="" version="1"/>
+    <Command dec="72" hex="0x0048" label="Aux 1" description="Aux" version="1"/>
+    <Command dec="73" hex="0x0049" label="Aux 2" description="" version="1"/>
+    <Command dec="74" hex="0x004A" label="B" description="" version="1"/>
+    <Command dec="75" hex="0x004B" label="Back" description="Previous Screen" version="1"/>
+    <Command dec="76" hex="0x004C" label="Background" description="Backlight" version="1"/>
+    <Command dec="77" hex="0x004D" label="Balance" description="" version="1"/>
+    <Command dec="78" hex="0x004E" label="Balance Left" description="" version="1"/>
+    <Command dec="79" hex="0x004F" label="Balance Right" description="" version="1"/>
+    <Command dec="80" hex="0x0050" label="Band" description="FM/AM" version="1"/>
+    <Command dec="81" hex="0x0051" label="Bandwidth" description="Wide/Narrow" version="1"/>
+    <Command dec="82" hex="0x0052" label="Bass" description="" version="1"/>
+    <Command dec="83" hex="0x0053" label="Bass Down" description="" version="1"/>
+    <Command dec="84" hex="0x0054" label="Bass Up" description="" version="1"/>
+    <Command dec="85" hex="0x0055" label="Blank" description="" version="1"/>
+    <Command dec="86" hex="0x0056" label="Breeze Mode" description="" version="1"/>
+    <Command dec="87" hex="0x0057" label="Bright" description="Brighten" version="1"/>
+    <Command dec="88" hex="0x0058" label="Brightness" description="" version="1"/>
+    <Command dec="89" hex="0x0059" label="Brightness Down" description="" version="1"/>
+    <Command dec="90" hex="0x005A" label="Brightness Up" description="" version="1"/>
+    <Command dec="91" hex="0x005B" label="Buy" description="" version="1"/>
+    <Command dec="92" hex="0x005C" label="C" description="" version="1"/>
+    <Command dec="93" hex="0x005D" label="Camera" description="" version="1"/>
+    <Command dec="94" hex="0x005E" label="Category Down" description="" version="1"/>
+    <Command dec="95" hex="0x005F" label="Category Up" description="" version="1"/>
+    <Command dec="96" hex="0x0060" label="Center" description="" version="1"/>
+    <Command dec="97" hex="0x0061" label="Center Down" description="Center Volume Down" version="1"/>
+    <Command dec="98" hex="0x0062" label="Center Mode" description="" version="1"/>
+    <Command dec="99" hex="0x0063" label="Center Up" description="Center Volume Up" version="1"/>
+    <Command dec="100" hex="0x0064" label="Channel/Program" description="C/P" version="1"/>
+    <Command dec="101" hex="0x0065" label="Clear" description="Cancel" version="1"/>
+    <Command dec="102" hex="0x0066" label="Close" description="" version="1"/>
+    <Command dec="103" hex="0x0067" label="Closed Caption" description="CC" version="1"/>
+    <Command dec="104" hex="0x0068" label="Cold" description="A/C" version="1"/>
+    <Command dec="105" hex="0x0069" label="Color" description="" version="1"/>
+    <Command dec="106" hex="0x006A" label="Color Down" description="" version="1"/>
+    <Command dec="107" hex="0x006B" label="Color Up" description="" version="1"/>
+    <Command dec="108" hex="0x006C" label="Component 1" description="RGB 1" version="1"/>
+    <Command dec="109" hex="0x006D" label="Component 2" description="RGB 2" version="1"/>
+    <Command dec="110" hex="0x006E" label="Component 3" description="" version="1"/>
+    <Command dec="111" hex="0x006F" label="Concert" description="" version="1"/>
+    <Command dec="112" hex="0x0070" label="Confirm" description="Check" version="1"/>
+    <Command dec="113" hex="0x0071" label="Continue" description="Continuous" version="1"/>
+    <Command dec="114" hex="0x0072" label="Contrast" description="" version="1"/>
+    <Command dec="115" hex="0x0073" label="Contrast Down" description="" version="1"/>
+    <Command dec="116" hex="0x0074" label="Contrast Up" description="" version="1"/>
+    <Command dec="117" hex="0x0075" label="Counter" description="" version="1"/>
+    <Command dec="118" hex="0x0076" label="Counter Reset" description="" version="1"/>
+    <Command dec="119" hex="0x0077" label="D" description="" version="1"/>
+    <Command dec="120" hex="0x0078" label="Day Down" description="" version="1"/>
+    <Command dec="121" hex="0x0079" label="Day Up" description="" version="1"/>
+    <Command dec="122" hex="0x007A" label="Delay" description="" version="1"/>
+    <Command dec="123" hex="0x007B" label="Delay Down" description="" version="1"/>
+    <Command dec="124" hex="0x007C" label="Delay Up" description="" version="1"/>
+    <Command dec="125" hex="0x007D" label="Delete" description="Erase" version="1"/>
+    <Command dec="126" hex="0x007E" label="Delimiter" description="Sub-Channel" version="1"/>
+    <Command dec="127" hex="0x007F" label="Digest" description="" version="1"/>
+    <Command dec="128" hex="0x0080" label="Digital" description="" version="1"/>
+    <Command dec="129" hex="0x0081" label="Dim" description="Dimmer" version="1"/>
+    <Command dec="130" hex="0x0082" label="Direct" description="" version="1"/>
+    <Command dec="131" hex="0x0083" label="Disarm" description="" version="1"/>
+    <Command dec="132" hex="0x0084" label="Disc" description="" version="1"/>
+    <Command dec="133" hex="0x0085" label="Disc 1" description="" version="1"/>
+    <Command dec="134" hex="0x0086" label="Disc 2" description="" version="1"/>
+    <Command dec="135" hex="0x0087" label="Disc 3" description="" version="1"/>
+    <Command dec="136" hex="0x0088" label="Disc 4" description="" version="1"/>
+    <Command dec="137" hex="0x0089" label="Disc 5" description="" version="1"/>
+    <Command dec="138" hex="0x008A" label="Disc 6" description="" version="1"/>
+    <Command dec="139" hex="0x008B" label="Disc Down" description="" version="1"/>
+    <Command dec="140" hex="0x008C" label="Disc Up" description="" version="1"/>
+    <Command dec="141" hex="0x008D" label="Disco" description="" version="1"/>
+    <Command dec="142" hex="0x008E" label="Edit" description="" version="1"/>
+    <Command dec="143" hex="0x008F" label="Effect Down" description="" version="1"/>
+    <Command dec="144" hex="0x0090" label="Effect Up" description="" version="1"/>
+    <Command dec="145" hex="0x0091" label="Eject" description="Open/Close" version="1"/>
+    <Command dec="146" hex="0x0092" label="End" description="" version="1"/>
+    <Command dec="147" hex="0x0093" label="EQ" description="Equalizer" version="1"/>
+    <Command dec="148" hex="0x0094" label="Fader" description="" version="1"/>
+    <Command dec="149" hex="0x0095" label="Fan" description="" version="1"/>
+    <Command dec="150" hex="0x0096" label="Fan High" description="" version="1"/>
+    <Command dec="151" hex="0x0097" label="Fan Low" description="" version="1"/>
+    <Command dec="152" hex="0x0098" label="Fan Medium" description="" version="1"/>
+    <Command dec="153" hex="0x0099" label="Fan Speed" description="" version="1"/>
+    <Command dec="154" hex="0x009A" label="Fastext Blue" description="" version="1"/>
+    <Command dec="155" hex="0x009B" label="Fastext Green" description="" version="1"/>
+    <Command dec="156" hex="0x009C" label="Fastext Purple" description="" version="1"/>
+    <Command dec="157" hex="0x009D" label="Fastext Red" description="" version="1"/>
+    <Command dec="158" hex="0x009E" label="Fastext White" description="" version="1"/>
+    <Command dec="159" hex="0x009F" label="Fastext Yellow" description="" version="1"/>
+    <Command dec="160" hex="0x00A0" label="Favorite Channel Down" description="" version="1"/>
+    <Command dec="161" hex="0x00A1" label="Favorite Channel Up" description="" version="1"/>
+    <Command dec="162" hex="0x00A2" label="Finalize" description="" version="1"/>
+    <Command dec="163" hex="0x00A3" label="Fine Tune" description="" version="1"/>
+    <Command dec="164" hex="0x00A4" label="Flat" description="" version="1"/>
+    <Command dec="165" hex="0x00A5" label="FM" description="" version="1"/>
+    <Command dec="166" hex="0x00A6" label="Focus Down" description="" version="1"/>
+    <Command dec="167" hex="0x00A7" label="Focus Up" description="" version="1"/>
+    <Command dec="168" hex="0x00A8" label="Freeze" description="" version="1"/>
+    <Command dec="169" hex="0x00A9" label="Front" description="" version="1"/>
+    <Command dec="170" hex="0x00AA" label="Game" description="" version="1"/>
+    <Command dec="171" hex="0x00AB" label="GoTo" description="Index Search" version="1"/>
+    <Command dec="172" hex="0x00AC" label="Hall" description="" version="1"/>
+    <Command dec="173" hex="0x00AD" label="Heat" description="" version="1"/>
+    <Command dec="174" hex="0x00AE" label="Help" description="" version="1"/>
+    <Command dec="175" hex="0x00AF" label="Home" description="" version="1"/>
+    <Command dec="176" hex="0x00B0" label="Index" description="VISS" version="1"/>
+    <Command dec="177" hex="0x00B1" label="Index Forward" description="" version="1"/>
+    <Command dec="178" hex="0x00B2" label="Index Reverse" description="" version="1"/>
+    <Command dec="179" hex="0x00B3" label="Interactive" description="Planner" version="1"/>
+    <Command dec="180" hex="0x00B4" label="Intro Scan" description="" version="1"/>
+    <Command dec="181" hex="0x00B5" label="Jazz" description="" version="1"/>
+    <Command dec="182" hex="0x00B6" label="Karaoke" description="" version="1"/>
+    <Command dec="183" hex="0x00B7" label="Keystone" description="" version="1"/>
+    <Command dec="184" hex="0x00B8" label="Keystone Down" description="" version="1"/>
+    <Command dec="185" hex="0x00B9" label="Keystone Up" description="" version="1"/>
+    <Command dec="186" hex="0x00BA" label="Language" description="SAP" version="1"/>
+    <Command dec="187" hex="0x00BB" label="Left Click" description="" version="1"/>
+    <Command dec="188" hex="0x00BC" label="Level" description="Volume" version="1"/>
+    <Command dec="189" hex="0x00BD" label="Light" description="Lamp" version="1"/>
+    <Command dec="190" hex="0x00BE" label="List" description="My Shows" version="1"/>
+    <Command dec="191" hex="0x00BF" label="Live TV" description="Return to Live" version="1"/>
+    <Command dec="192" hex="0x00C0" label="Local/Dx" description="" version="1"/>
+    <Command dec="193" hex="0x00C1" label="Loudness" description="" version="1"/>
+    <Command dec="194" hex="0x00C2" label="Mail" description="Email" version="1"/>
+    <Command dec="195" hex="0x00C3" label="Mark" description="Bookmark" version="1"/>
+    <Command dec="196" hex="0x00C4" label="Memory Recall" description="" version="1"/>
+    <Command dec="197" hex="0x00C5" label="Monitor" description="Tape Monitor" version="1"/>
+    <Command dec="198" hex="0x00C6" label="Movie" description="" version="1"/>
+    <Command dec="199" hex="0x00C7" label="Multi Room" description="" version="1"/>
+    <Command dec="200" hex="0x00C8" label="Music" description="TV/Radio, My Music (WMC)" version="1"/>
+    <Command dec="201" hex="0x00C9" label="Music Scan" description="Memory Scan" version="1"/>
+    <Command dec="202" hex="0x00CA" label="Natural" description="" version="1"/>
+    <Command dec="203" hex="0x00CB" label="Night" description="" version="1"/>
+    <Command dec="204" hex="0x00CC" label="Noise Reduction" description="Dolby NR" version="1"/>
+    <Command dec="205" hex="0x00CD" label="Normalize" description="Personal Preference" version="1"/>
+    <Command dec="206" hex="0x00CE" label="Discrete input Cable" description="CATV" version="1"/>
+    <Command dec="207" hex="0x00CF" label="Discrete input CD 1" description="CD" version="1"/>
+    <Command dec="208" hex="0x00D0" label="Discrete input CD 2" description="CDR" version="1"/>
+    <Command dec="209" hex="0x00D1" label="Discrete input CDR" description="Compact Disc Recorder" version="1"/>
+    <Command dec="210" hex="0x00D2" label="Discrete input DAT" description="Digital Audio Tape" version="1"/>
+    <Command dec="211" hex="0x00D3" label="Discrete input DVD" description="Digital Video Disk" version="1"/>
+    <Command dec="212" hex="0x00D4" label="Discrete input DVI" description="Digital Video Interface" version="1"/>
+    <Command dec="213" hex="0x00D5" label="Discrete input HDTV" description="" version="1"/>
+    <Command dec="214" hex="0x00D6" label="Discrete input LD" description="Laser Disc" version="1"/>
+    <Command dec="215" hex="0x00D7" label="Discrete input MD" description="Mini Disc" version="1"/>
+    <Command dec="216" hex="0x00D8" label="Discrete input PC" description="Personal Computer" version="1"/>
+    <Command dec="217" hex="0x00D9" label="Discrete input PVR" description="Personal Video Recorder" version="1"/>
+    <Command dec="218" hex="0x00DA" label="Discrete input TV" description="" version="1"/>
+    <Command dec="219" hex="0x00DB" label="Discrete input TV/VCR" description="TV/DVD" version="1"/>
+    <Command dec="220" hex="0x00DC" label="Discrete input VCR" description="" version="1"/>
+    <Command dec="221" hex="0x00DD" label="One Touch Playback" description="OTPB" version="1"/>
+    <Command dec="222" hex="0x00DE" label="One Touch Record" description="OTR" version="1"/>
+    <Command dec="223" hex="0x00DF" label="Open" description="" version="1"/>
+    <Command dec="224" hex="0x00E0" label="Optical" description="" version="1"/>
+    <Command dec="225" hex="0x00E1" label="Options" description="" version="1"/>
+    <Command dec="226" hex="0x00E2" label="Orchestra" description="" version="1"/>
+    <Command dec="227" hex="0x00E3" label="PAL/NTSC" description="System Select" version="1"/>
+    <Command dec="228" hex="0x00E4" label="Parental Lock" description="Parental Control" version="1"/>
+    <Command dec="229" hex="0x00E5" label="PBC" description="Playback Control" version="1"/>
+    <Command dec="230" hex="0x00E6" label="Phono" description="" version="1"/>
+    <Command dec="231" hex="0x00E7" label="Photos" description="Pictures, My Pictures (WMC)" version="1"/>
+    <Command dec="232" hex="0x00E8" label="Picture Menu" description="Picture Adjust" version="1"/>
+    <Command dec="233" hex="0x00E9" label="Picture Mode" description="Smart Picture" version="1"/>
+    <Command dec="234" hex="0x00EA" label="Picture Mute" description="" version="1"/>
+    <Command dec="235" hex="0x00EB" label="PIP Channel Down" description="" version="1"/>
+    <Command dec="236" hex="0x00EC" label="PIP Channel Up" description="" version="1"/>
+    <Command dec="237" hex="0x00ED" label="PIP Freeze" description="" version="1"/>
+    <Command dec="238" hex="0x00EE" label="PIP Input" description="PIP Mode" version="1"/>
+    <Command dec="239" hex="0x00EF" label="PIP Move" description="PIP Position" version="1"/>
+    <Command dec="240" hex="0x00F0" label="PIP Off" description="" version="1"/>
+    <Command dec="241" hex="0x00F1" label="PIP On" description="PIP" version="1"/>
+    <Command dec="242" hex="0x00F2" label="PIP Size" description="" version="1"/>
+    <Command dec="243" hex="0x00F3" label="PIP Split" description="Multi Screen" version="1"/>
+    <Command dec="244" hex="0x00F4" label="PIP Swap" description="PIP Exchange" version="1"/>
+    <Command dec="245" hex="0x00F5" label="Play Mode" description="" version="1"/>
+    <Command dec="246" hex="0x00F6" label="Play Reverse" description="" version="1"/>
+    <Command dec="247" hex="0x00F7" label="Power Off" description="" version="1"/>
+    <Command dec="248" hex="0x00F8" label="Power On" description="" version="1"/>
+    <Command dec="249" hex="0x00F9" label="PPV" description="Pay Per View" version="1"/>
+    <Command dec="250" hex="0x00FA" label="Preset" description="" version="1"/>
+    <Command dec="251" hex="0x00FB" label="Program" description="Program Memory" version="1"/>
+    <Command dec="252" hex="0x00FC" label="Progressive Scan" description="Progressive" version="1"/>
+    <Command dec="253" hex="0x00FD" label="ProLogic" description="Dolby Prologic" version="1"/>
+    <Command dec="254" hex="0x00FE" label="PTY" description="Audio Program Type" version="1"/>
+    <Command dec="255" hex="0x00FF" label="Quick Skip" description="Commercial Skip" version="1"/>
+    <Command dec="256" hex="0x0100" label="Random" description="Shuffle" version="1"/>
+    <Command dec="257" hex="0x0101" label="RDS" description="Radio Data System" version="1"/>
+    <Command dec="258" hex="0x0102" label="Rear" description="" version="1"/>
+    <Command dec="259" hex="0x0103" label="Rear Volume Down" description="" version="1"/>
+    <Command dec="260" hex="0x0104" label="Rear Volume Up" description="" version="1"/>
+    <Command dec="261" hex="0x0105" label="Record Mute" description="" version="1"/>
+    <Command dec="262" hex="0x0106" label="Record Pause" description="" version="1"/>
+    <Command dec="263" hex="0x0107" label="Repeat" description="" version="1"/>
+    <Command dec="264" hex="0x0108" label="Repeat A-B" description="" version="1"/>
+    <Command dec="265" hex="0x0109" label="Resume" description="" version="1"/>
+    <Command dec="266" hex="0x010A" label="RGB" description="Red Green Blue Component Video" version="1"/>
+    <Command dec="267" hex="0x010B" label="Right Click" description="" version="1"/>
+    <Command dec="268" hex="0x010C" label="Rock" description="" version="1"/>
+    <Command dec="269" hex="0x010D" label="Rotate Left" description="" version="1"/>
+    <Command dec="270" hex="0x010E" label="Rotate Right" description="" version="1"/>
+    <Command dec="271" hex="0x010F" label="SAT" description="Sky" version="1"/>
+    <Command dec="272" hex="0x0110" label="Scan" description="Channel Scan" version="1"/>
+    <Command dec="273" hex="0x0111" label="Scart" description="" version="1"/>
+    <Command dec="274" hex="0x0112" label="Scene" description="" version="1"/>
+    <Command dec="275" hex="0x0113" label="Scroll" description="" version="1"/>
+    <Command dec="276" hex="0x0114" label="Services" description="" version="1"/>
+    <Command dec="277" hex="0x0115" label="Setup Menu" description="Setup" version="1"/>
+    <Command dec="278" hex="0x0116" label="Sharp" description="" version="1"/>
+    <Command dec="279" hex="0x0117" label="Sharpness" description="" version="1"/>
+    <Command dec="280" hex="0x0118" label="Sharpness Down" description="" version="1"/>
+    <Command dec="281" hex="0x0119" label="Sharpness Up" description="" version="1"/>
+    <Command dec="282" hex="0x011A" label="Side A/B" description="" version="1"/>
+    <Command dec="283" hex="0x011B" label="Skip Forward" description="Next" version="1"/>
+    <Command dec="284" hex="0x011C" label="Skip Reverse" description="Previous" version="1"/>
+    <Command dec="285" hex="0x011D" label="Sleep" description="Off Timer" version="1"/>
+    <Command dec="286" hex="0x011E" label="Slow" description="" version="1"/>
+    <Command dec="287" hex="0x011F" label="Slow Forward" description="" version="1"/>
+    <Command dec="288" hex="0x0120" label="Slow Reverse" description="" version="1"/>
+    <Command dec="289" hex="0x0121" label="Sound Menu" description="Audio Menu" version="1"/>
+    <Command dec="290" hex="0x0122" label="Sound Mode" description="Smart Sound" version="1"/>
+    <Command dec="291" hex="0x0123" label="Speed" description="Record Speed" version="1"/>
+    <Command dec="292" hex="0x0124" label="Speed Down" description="" version="1"/>
+    <Command dec="293" hex="0x0125" label="Speed Up" description="" version="1"/>
+    <Command dec="294" hex="0x0126" label="Sports" description="Digital Surround Processing" version="1"/>
+    <Command dec="295" hex="0x0127" label="Stadium" description="" version="1"/>
+    <Command dec="296" hex="0x0128" label="Start" description="" version="1"/>
+    <Command dec="297" hex="0x0129" label="Start ID Erase" description="Erase" version="1"/>
+    <Command dec="298" hex="0x012A" label="Start ID Renumber" description="Renumber" version="1"/>
+    <Command dec="299" hex="0x012B" label="Start ID Write" description="Write" version="1"/>
+    <Command dec="300" hex="0x012C" label="Step" description="" version="1"/>
+    <Command dec="301" hex="0x012D" label="Stereo/Mono" description="L/R" version="1"/>
+    <Command dec="302" hex="0x012E" label="Still Forward" description="Frame Advance" version="1"/>
+    <Command dec="303" hex="0x012F" label="Still Reverse" description="Frame Reverse" version="1"/>
+    <Command dec="304" hex="0x0130" label="Subtitle" description="Subtitle On-Off" version="1"/>
+    <Command dec="305" hex="0x0131" label="Subwoofer Down" description="" version="1"/>
+    <Command dec="306" hex="0x0132" label="Subwoofer Up" description="" version="1"/>
+    <Command dec="307" hex="0x0133" label="Super Bass" description="Bass Boost" version="1"/>
+    <Command dec="308" hex="0x0134" label="Surround" description="" version="1"/>
+    <Command dec="309" hex="0x0135" label="Surround Mode" description="Sound Field" version="1"/>
+    <Command dec="310" hex="0x0136" label="S-Video" description="" version="1"/>
+    <Command dec="311" hex="0x0137" label="Sweep" description="Oscillate" version="1"/>
+    <Command dec="312" hex="0x0138" label="Synchro Record" description="CD Synchro" version="1"/>
+    <Command dec="313" hex="0x0139" label="Tape 1" description="Deck 1" version="1"/>
+    <Command dec="314" hex="0x013A" label="Tape 1-2" description="Deck 1-2" version="1"/>
+    <Command dec="315" hex="0x013B" label="Tape 2" description="Deck 2" version="1"/>
+    <Command dec="316" hex="0x013C" label="Temperature Down" description="" version="1"/>
+    <Command dec="317" hex="0x013D" label="Temperature Up" description="" version="1"/>
+    <Command dec="318" hex="0x013E" label="Test Tone" description="" version="1"/>
+    <Command dec="319" hex="0x013F" label="Text" description="Teletext" version="1"/>
+    <Command dec="320" hex="0x0140" label="Text Expand" description="" version="1"/>
+    <Command dec="321" hex="0x0141" label="Text Hold" description="" version="1"/>
+    <Command dec="322" hex="0x0142" label="Text Index" description="" version="1"/>
+    <Command dec="323" hex="0x0143" label="Text Mix" description="" version="1"/>
+    <Command dec="324" hex="0x0144" label="Text Off" description="" version="1"/>
+    <Command dec="325" hex="0x0145" label="Text Reveal" description="" version="1"/>
+    <Command dec="326" hex="0x0146" label="Text Subpage" description="" version="1"/>
+    <Command dec="327" hex="0x0147" label="Text Timed Page" description="" version="1"/>
+    <Command dec="328" hex="0x0148" label="Text Update" description="Text Cancel" version="1"/>
+    <Command dec="329" hex="0x0149" label="Theater" description="Cinema EQ" version="1"/>
+    <Command dec="330" hex="0x014A" label="Theme" description="Category Select" version="1"/>
+    <Command dec="331" hex="0x014B" label="Thumbs Down" description="" version="1"/>
+    <Command dec="332" hex="0x014C" label="Thumbs Up" description="" version="1"/>
+    <Command dec="333" hex="0x014D" label="Tilt Down" description="" version="1"/>
+    <Command dec="334" hex="0x014E" label="Tilt Up" description="" version="1"/>
+    <Command dec="335" hex="0x014F" label="Time" description="Clock" version="1"/>
+    <Command dec="336" hex="0x0150" label="Timer" description="" version="1"/>
+    <Command dec="337" hex="0x0151" label="Timer Down" description="" version="1"/>
+    <Command dec="338" hex="0x0152" label="Timer Up" description="" version="1"/>
+    <Command dec="339" hex="0x0153" label="Tint" description="" version="1"/>
+    <Command dec="340" hex="0x0154" label="Tint Down" description="" version="1"/>
+    <Command dec="341" hex="0x0155" label="Tint Up" description="" version="1"/>
+    <Command dec="342" hex="0x0156" label="Title" description="Top Menu" version="1"/>
+    <Command dec="343" hex="0x0157" label="Track" description="Chapter" version="1"/>
+    <Command dec="344" hex="0x0158" label="Tracking" description="" version="1"/>
+    <Command dec="345" hex="0x0159" label="Tracking Down" description="" version="1"/>
+    <Command dec="346" hex="0x015A" label="Tracking Up" description="" version="1"/>
+    <Command dec="347" hex="0x015B" label="Treble" description="" version="1"/>
+    <Command dec="348" hex="0x015C" label="Treble Down" description="" version="1"/>
+    <Command dec="349" hex="0x015D" label="Treble Up" description="" version="1"/>
+    <Command dec="350" hex="0x015E" label="Tune Down" description="Audio Tune Down" version="1"/>
+    <Command dec="351" hex="0x015F" label="Tune Up" description="Audio Tune Up" version="1"/>
+    <Command dec="352" hex="0x0160" label="Tuner" description="" version="1"/>
+    <Command dec="353" hex="0x0161" label="VCR Plus+" description="Showview" version="1"/>
+    <Command dec="354" hex="0x0162" label="Video 1" description="A/V 1" version="1"/>
+    <Command dec="355" hex="0x0163" label="Video 2" description="A/V 2" version="1"/>
+    <Command dec="356" hex="0x0164" label="Video 3" description="A/V 3" version="1"/>
+    <Command dec="357" hex="0x0165" label="Video 4" description="A/V 4" version="1"/>
+    <Command dec="358" hex="0x0166" label="Video 5" description="A/V 5" version="1"/>
+    <Command dec="359" hex="0x0167" label="View" description="" version="1"/>
+    <Command dec="360" hex="0x0168" label="Voice" description="Vocals" version="1"/>
+    <Command dec="361" hex="0x0169" label="Zoom" description="Magnify" version="1"/>
+    <Command dec="362" hex="0x016A" label="Zoom In" description="Zoom Up" version="1"/>
+    <Command dec="363" hex="0x016B" label="Zoom Out" description="Zoom Down" version="1"/>
+    <Command dec="364" hex="0x016C" label="eHome" description="(Windows Media Center)" version="2"/>
+    <Command dec="365" hex="0x016D" label="Details" description="(Windows Media Center)" version="2"/>
+    <Command dec="366" hex="0x016E" label="DVD Menu" description="(Windows Media Center)" version="2"/>
+    <Command dec="367" hex="0x016F" label="My TV" description="(Windows Media Center)" version="2"/>
+    <Command dec="368" hex="0x0170" label="Recorded TV" description="(Windows Media Center)" version="2"/>
+    <Command dec="369" hex="0x0171" label="My Videos" description="(Windows Media Center)" version="2"/>
+    <Command dec="370" hex="0x0172" label="DVD Angle" description="(Windows Media Center)" version="2"/>
+    <Command dec="371" hex="0x0173" label="DVD Audio" description="(Windows Media Center)" version="2"/>
+    <Command dec="372" hex="0x0174" label="DVD Subtitle" description="(Windows Media Center)" version="2"/>
+    <Command dec="373" hex="0x0175" label="Radio" description="(Windows Media Center)" version="2"/>
+    <Command dec="374" hex="0x0176" label="#" description="(Windows Media Center)" version="2"/>
+    <Command dec="375" hex="0x0177" label="*" description="(Windows Media Center)" version="2"/>
+    <Command dec="376" hex="0x0178" label="OEM 1" description="(Windows Media Center)" version="2"/>
+    <Command dec="377" hex="0x0179" label="OEM 2" description="(Windows Media Center)" version="2"/>
+    <Command dec="378" hex="0x017A" label="Info" description="Used to request information" version="3"/>
+    <Command dec="379" hex="0x017B" label="CAPS NUM" description="Switch between numeric and alpha (Shift)" version="3"/>
+    <Command dec="380" hex="0x017C" label="TV MODE" description="Cycles through video output modes/resolutions" version="3"/>
+    <Command dec="381" hex="0x017D" label="SOURCE" description="Displays the possible sources for the playback. [NFS, ext., USB, UPnP,…]" version="3"/>
+    <Command dec="382" hex="0x017E" label="FILEMODE" description="File manipulation. Add/remove to list, create folder, rename file,…" version="3"/>
+    <Command dec="383" hex="0x017F" label="Time Seek" description="This seeks to time position. Used for DVD/CD/others" version="3"/>
+    <Command dec="384" hex="0x0180" label="Mouse enable" description="Mouse pointer enable" version="4"/>
+    <Command dec="385" hex="0x0181" label="Mouse disable" description="Mouse pointer disable" version="4"/>
+    <Command dec="386" hex="0x0182" label="VOD" description="Video on demand" version="4"/>
+    <Command dec="387" hex="0x0183" label="Thumbs Up" description="Thumbs up for positive feedback in GUI" version="4"/>
+    <Command dec="388" hex="0x0184" label="Thumbs Down" description="Thumbs down for negative feedback in GUI" version="4"/>
+    <Command dec="389" hex="0x0185" label="Apps" description="Application selection/launch" version="4"/>
+    <Command dec="390" hex="0x0186" label="Mouse toggle" description="Will toggle a mouse pointer between on and off" version="4"/>
+    <Command dec="391" hex="0x0187" label="TV Mode" description="Will direct an AV device to go the TV mode (the mode is configured on the device)" version="4"/>
+    <Command dec="392" hex="0x0188" label="DVD Mode" description="Will direct an AV device to go the DVD mode (the mode is configured on the device)" version="4"/>
+    <Command dec="393" hex="0x0189" label="STB Mode" description="Will direct an AV device to go the STB mode (the mode is configured on the device)" version="4"/>
+    <Command dec="394" hex="0x018A" label="AUX Mode" description="Will direct an AV device to go the AUX mode (the mode is configured on the device)" version="4"/>
+    <Command dec="395" hex="0x018B" label="BluRay Mode" description="Will direct an AV device to go the BluRay mode (the mode is configured on the device)" version="4"/>
+    <Command dec="396" hex="0x018C" label="" description="Reserved for more mode keys" version="N/A"/>
+    <Command dec="397" hex="0x018D" label="" description="Reserved for more mode keys" version="N/A"/>
+    <Command dec="398" hex="0x018E" label="" description="Reserved for more mode keys" version="N/A"/>
+    <Command dec="399" hex="0x018F" label="" description="Reserved for more mode keys" version="N/A"/>
+    <Command dec="400" hex="0x0190" label="" description="Reserved for more mode keys" version="N/A"/>
+    <Command dec="401" hex="0x0191" label="" description="Reserved for more mode keys" version="N/A"/>
+    <Command dec="402" hex="0x0192" label="" description="Reserved for more mode keys" version="N/A"/>
+    <Command dec="403" hex="0x0193" label="" description="Reserved for more mode keys" version="N/A"/>
+    <Command dec="404" hex="0x0194" label="Standby 1" description="Used for AV devices that support multiple standby mode. Power ON should be used to turn on the device" version="4"/>
+    <Command dec="405" hex="0x0195" label="Standby 2" description="Used for AV devices that support multiple standby mode. Power ON should be used to turn on the device" version="4"/>
+    <Command dec="406" hex="0x0196" label="Standby 3" description="Used for AV devices that support multiple standby mode. Power ON should be used to turn on the device" version="4"/>
+    <Command dec="407" hex="0x0197" label="HDMI 1" description="Discrete command used to set an AV device to HDMI input 1" version="4"/>
+    <Command dec="408" hex="0x0198" label="HDMI 2" description="Discrete command used to set an AV device to HDMI input 2" version="4"/>
+    <Command dec="409" hex="0x0199" label="HDMI 3" description="Discrete command used to set an AV device to HDMI input 3" version="4"/>
+    <Command dec="410" hex="0x019A" label="HDMI 4" description="Discrete command used to set an AV device to HDMI input 4" version="4"/>
+    <Command dec="411" hex="0x019B" label="HDMI 5" description="Discrete command used to set an AV device to HDMI input 5" version="4"/>
+    <Command dec="412" hex="0x019C" label="HDMI 6" description="Discrete command used to set an AV device to HDMI input 6" version="4"/>
+    <Command dec="413" hex="0x019D" label="HDMI 7" description="Discrete command used to set an AV device to HDMI input 7" version="4"/>
+    <Command dec="414" hex="0x019E" label="HDMI 8" description="Discrete command used to set an AV device to HDMI input 8" version="4"/>
+    <Command dec="415" hex="0x019F" label="HDMI 9" description="Discrete command used to set an AV device to HDMI input 9" version="4"/>
+    <Command dec="416" hex="0x01A0" label="USB 1" description="Discrete command used to set an AV device to USB input 1" version="4"/>
+    <Command dec="417" hex="0x01A1" label="USB 2" description="Discrete command used to set an AV device to USB input 2" version="4"/>
+    <Command dec="418" hex="0x01A2" label="USB 3" description="Discrete command used to set an AV device to USB input 3" version="4"/>
+    <Command dec="419" hex="0x01A3" label="USB 4" description="Discrete command used to set an AV device to USB input 4" version="4"/>
+    <Command dec="420" hex="0x01A4" label="USB 5" description="Discrete command used to set an AV device to USB input 5" version="4"/>
+    <Command dec="421" hex="0x01A5" label="ZOOM - 4:3 Normal" description="Discrete commands that is used to set a TV a direct Zoom mode" version="4"/>
+    <Command dec="422" hex="0x01A6" label="ZOOM - 4:3 Zoom" description="Discrete commands that is used to set a TV a direct Zoom mode" version="4"/>
+    <Command dec="423" hex="0x01A7" label="ZOOM - 16:9 Normal" description="Discrete commands that is used to set a TV a direct Zoom mode" version="4"/>
+    <Command dec="424" hex="0x01A8" label="ZOOM - 16:9 Zoom" description="Discrete commands that is used to set a TV a direct Zoom mode" version="4"/>
+    <Command dec="425" hex="0x01A9" label="ZOOM - 16:9 Wide 1" description="Discrete commands that is used to set a TV a direct Zoom mode" version="4"/>
+    <Command dec="426" hex="0x01AA" label="ZOOM 16:9 Wide 2" description="Discrete commands that is used to set a TV a direct Zoom mode" version="4"/>
+    <Command dec="427" hex="0x01AB" label="ZOOM 16:9 Wide 3" description="Discrete commands that is used to set a TV a direct Zoom mode" version="4"/>
+    <Command dec="428" hex="0x01AC" label="ZOOM 16:9 Cinema" description="Discrete commands that is used to set a TV a direct Zoom mode" version="4"/>
+    <Command dec="429" hex="0x01AD" label="ZOOM Default" description="Discrete commands that is used to set a TV the default Zoom mode" version="4"/>
+    <Command dec="430" hex="0x01AE" label="" description="Reserved for more Zoom modes" version="N/A"/>
+    <Command dec="431" hex="0x01BF" label="" description="Reserved for more Zoom modes" version="N/A"/>
+    <Command dec="432" hex="0x01B0" label="Auto Zoom" description="Will set Zoom mode automatically" version="4"/>
+    <Command dec="433" hex="0x01B1" label="ZOOM - Set as Default Zoom" description="Will set the current active Zoom level to default" version="4"/>
+    <Command dec="434" hex="0x01B2" label="Mute ON" description="Discrete Mute ON command" version="4"/>
+    <Command dec="435" hex="0x01B3" label="Mute OFF" description="Discrete Mute OFF command" version="4"/>
+    <Command dec="436" hex="0x01B4" label="AUDIO Mode - AUDYSSEY AUDIO OFF" description="Discrete Audio mode for Audussey audio processing (Off)" version="4"/>
+    <Command dec="437" hex="0x01B5" label="AUDIO Mode - AUDYSSEY AUDIO LO" description="Discrete Audio mode for Audussey audio processing (Low)" version="4"/>
+    <Command dec="438" hex="0x01B6" label="AUDIO Mode - AUDYSSEY AUDIO MED" description="Discrete Audio mode for Audussey audio processing (Medium)" version="4"/>
+    <Command dec="439" hex="0x01B7" label="AUDIO Mode - AUDYSSEY AUDIO HI" description="Discrete Audio mode for Audussey audio processing (High)" version="4"/>
+    <Command dec="440" hex="0x01B8" label="" description="" version="N/A"/>
+    <Command dec="441" hex="0x01B9" label="" description="" version="N/A"/>
+    <Command dec="442" hex="0x01BA" label="AUDIO Mode - SRS SURROUND ON" description="Discrete Audio mode for SRS audio processing" version="4"/>
+    <Command dec="443" hex="0x01BB" label="AUDIO Mode - SRS SURROUND OFF" description="Discrete Audio mode for SRS audio processing" version="4"/>
+    <Command dec="444" hex="0x01BC" label="" description="" version="N/A"/>
+    <Command dec="445" hex="0x01BD" label="" description="" version="N/A"/>
+    <Command dec="446" hex="0x01BE" label="" description="" version="N/A"/>
+    <Command dec="447" hex="0x01BF" label="Picture Mode - Home" description="Discrete picture for TVs" version="4"/>
+    <Command dec="448" hex="0x01C0" label="Picture Mode - Retail" description="Discrete picture for TVs" version="4"/>
+    <Command dec="449" hex="0x01C1" label="Picture Mode - Vivid" description="Discrete picture for TVs" version="4"/>
+    <Command dec="450" hex="0x01C2" label="Picture Mode - Standard" description="Discrete picture for TVs" version="4"/>
+    <Command dec="451" hex="0x01C3" label="Picture Mode - Theater" description="Discrete picture for TVs" version="4"/>
+    <Command dec="452" hex="0x01C4" label="Picture Mode - Sports" description="Discrete picture for TVs" version="4"/>
+    <Command dec="453" hex="0x01C5" label="Picture Mode - Energy savings" description="Discrete picture for TVs" version="4"/>
+    <Command dec="454" hex="0x01C6" label="Picture Mode - Custom" description="Discrete picture for TVs" version="4"/>
+    <Command dec="455" hex="0x01C7" label="Cool" description="Discrete picture temperature adjustments" version="4"/>
+    <Command dec="456" hex="0x01C8" label="Medium" description="Discrete picture temperature adjustments" version="4"/>
+    <Command dec="457" hex="0x01C9" label="Warm_D65" description="Discrete picture temperature adjustments" version="4"/>
+    <Command dec="458" hex="0x01CA" label="CC ON" description="Discrete Closed caption commands" version="4"/>
+    <Command dec="459" hex="0x01CB" label="CC OFF" description="Discrete Closed caption commands" version="4"/>
+    <Command dec="460" hex="0x01CC" label="Video Mute ON" description="Discrete Video mute command" version="4"/>
+    <Command dec="461" hex="0x01CD" label="Video Mute OFF" description="Discrete Video mute command" version="4"/>
+    <Command dec="462" hex="0x01CE" label="Next Event" description="Go to next state or event" version="4"/>
+    <Command dec="463" hex="0x01CF" label="Previous Event" description="Go to previous state or event" version="4"/>
+    <Command dec="464" hex="0x01D0" label="CEC device list" description="Brings up the CES device list" version="4"/>
+    <Command dec="465" hex="0x01D1" label="MTS SAP" description="Secondary Audio programming" version="4"/>
+  </Commands>
+</SimpleAV>

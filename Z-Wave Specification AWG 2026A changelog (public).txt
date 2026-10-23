@@ -1,0 +1,6 @@
+All registries moved from XLSX to XML format to allow developers use them in controller software, code generation and build automation.
+Changed Security S2 V2 NLS Node List Get/Report commands flow to allow support of bigger networks.
+Added new error codes for Firmware Update CC to improve user experience.
+Clarified WOEEN Role Type.
+Clarified User Credential V2, Version V4, Active Schedule V1 and Security S2 V2 CCs.
+Clarified Version V4 Migration process.

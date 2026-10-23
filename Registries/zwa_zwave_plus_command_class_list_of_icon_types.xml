@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+SPDX-License-Identifier: BSD-3-Clause
+SPDX-FileCopyrightText: 2025 Z-Wave-Alliance <https://z-wavealliance.org/>
+-->
+<ZWavePlus>
+  <Icons>
+    <Icon name="ICON_TYPE_UNASSIGNED" value="0x0000" description="MUST NOT be advertised for Installer Icon Type. An application GUI SHOULD show this icon for any unknown generic icon type. If a known generic icon type can be determined from an unknown specific icon type, an application GUI SHOULD NOT show this icon but rather show the generic icon type."/>
+    <Icon name="ICON_TYPE_GENERIC_CENTRAL_CONTROLLER" value="0x0100" description="Central Controller"/>
+    <Icon name="ICON_TYPE_GENERIC_DISPLAY_SIMPLE" value="0x0200" description="Display Simple"/>
+    <Icon name="ICON_TYPE_GENERIC_DOOR_LOCK_KEYPAD" value="0x0300" description="Door Lock Keypad"/>
+    <Icon name="ICON_TYPE_GENERIC_FAN_SWITCH" value="0x0400" description="Fan Switch Device Type"/>
+    <Icon name="ICON_TYPE_GENERIC_GATEWAY" value="0x0500" description="Gateway Device"/>
+    <Icon name="ICON_TYPE_GENERIC_LIGHT_DIMMER_SWITCH" value="0x0600" description="Generic Light Dimmer icon. This icon is intended for user icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_LIGHT_DIMMER_SWITCH_PLUGIN" value="0x0601" description="Light Dimmer, implemented as a plugin device. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_LIGHT_DIMMER_SWITCH_WALL_OUTLET" value="0x0602" description="Light Dimmer, implemented as a wall outlet. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_LIGHT_DIMMER_SWITCH_CEILING_OUTLET" value="0x0603" description="Light Dimmer, implemented as a ceiling outlet. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_LIGHT_DIMMER_SWITCH_WALL_LAMP" value="0x0604" description="Light Dimmer, implemented as a wall mounted lamp. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_LIGHT_DIMMER_SWITCH_LAMP_POST_HIGH" value="0x0605" description="Light Dimmer, implemented as a ceiling outlet. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_LIGHT_DIMMER_SWITCH_LAMP_POST_LOW" value="0x0606" description="Light Dimmer, implemented as a ceiling outlet. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_LIGHT_DIMMER_SWITCH_DIN_RAIL_MODULE" value="0x0607" description="Light Dimmer, implemented as a DIN Rail module. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_GENERIC_ON_OFF_POWER_SWITCH" value="0x0700" description="Generic Relay device icon. This icon is intended for user icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_POWER_SWITCH_PLUGIN" value="0x0701" description="Relay device, implemented as a plugin device. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_POWER_SWITCH_WALL_OUTLET" value="0x0702" description="Relay device, implemented as a wall outlet. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_POWER_SWITCH_CEILING_OUTLET" value="0x0703" description="Relay device, implemented as a ceiling outlet. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_POWER_SWITCH_WALL_LAMP" value="0x0704" description="Relay device, implemented as a wall mounted lamp. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_POWER_SWITCH_LAMP_POST_HIGH" value="0x0705" description="Relay device, implemented as a ceiling outlet. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_POWER_SWITCH_LAMP_POST_LOW" value="0x0706" description="Relay device, implemented as a ceiling outlet. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_POWER_SWITCH_DIN_RAIL_MODULE" value="0x0707" description="Relay device, implemented as a DIN Rail module. This icon is intended for installer icon types"/>
+    <Icon name="ICON_TYPE_GENERIC_POWER_STRIP" value="0x0800" description="Power Strip. Individual outlets of a power strip should be assigned the following installer type icon: ICON_TYPE_SPECIFIC_POWER_STRIP_INDIVIDUAL_OUTLET. Individual outlets of a power strip should be assigned one of the following user type icons: ICON_TYPE_GENERIC_LIGHT_DIMMER_SWITCH, ICON_TYPE_GENERIC_ON_OFF_POWER_SWITCH."/>
+    <Icon name="ICON_TYPE_SPECIFIC_POWER_STRIP_INDIVIDUAL_OUTLET" value="0x08FF" description="Individual outlet of a power strip for showing outlets in exploded view"/>
+    <Icon name="ICON_TYPE_GENERIC_REMOTE_CONTROL_AV" value="0x0900" description="Remote Control; AV"/>
+    <Icon name="ICON_TYPE_GENERIC_REMOTE_CONTROL_MULTI_PURPOSE" value="0x0A00" description="Remote Control; Multi Purpose"/>
+    <Icon name="ICON_TYPE_GENERIC_REMOTE_CONTROL_SIMPLE" value="0x0B00" description="Remote Control Simple"/>
+    <Icon name="ICON_TYPE_SPECIFIC_REMOTE_CONTROL_SIMPLE_KEYFOB" value="0x0B01" description="Remote Control, Simple (Key fob)"/>
+    <Icon name="ICON_TYPE_GENERIC_SENSOR_NOTIFICATION" value="0x0C00" description="Unknown Sensor Alarm"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_SMOKE_ALARM" value="0x0C01" description="Smoke Alarm"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_CO_ALARM" value="0x0C02" description="CO Alarm"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_CO2_ALARM" value="0x0C03" description="CO2 Alarm"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_HEAT_ALARM" value="0x0C04" description="Heat Alarm"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_WATER_ALARM" value="0x0C05" description="Water Alarm"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_ACCESS_CONTROL" value="0x0C06" description="Door/Window alarm"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_HOME_SECURITY" value="0x0C07" description="Motion Alarm"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_POWER_MANAGEMENT" value="0x0C08" description=""/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_SYSTEM" value="0x0C09" description=""/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_EMERGENCY_ALARM" value="0x0C0A" description="Emergency Alarm"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_CLOCK" value="0x0C0B" description=""/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_APPLIANCE" value="0x0C0C" description=""/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_HOME_HEALTH" value="0x0C0D" description=""/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_SIREN" value="0x0C0E" description=""/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_WATER_VALVE" value="0x0C0F" description=""/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_WEATHER_ALARM" value="0x0C10" description=""/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_IRRIGATION" value="0x0C11" description=""/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_GAS_ALARM" value="0x0C12" description=""/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_PEST_CONTROL" value="0x0C13" description=""/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_LIGHT_SENSOR" value="0x0C14" description="Light detection sensor"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_MULTIDEVICE" value="0x0CFF" description="Bundled Alarm sensors. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing multiple alarm functions. A user interface should not show the root device. Individual End Points of the multi-alarm device may be assigned any alarm icon"/>
+    <Icon name="ICON_TYPE_GENERIC_SENSOR_MULTILEVEL" value="0x0D00" description="Multilevel Sensor"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_AIR_TEMPERATURE" value="0x0D01" description="Multilevel Sensor; Air Temperature"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_GENERAL_PURPOSE_VALUE" value="0x0D02" description="Multilevel Sensor; General Purpose"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_LUMINANCE" value="0x0D03" description="Multilevel Sensor; Luminance"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_POWER" value="0x0D04" description="Multilevel Sensor; Power"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_HUMIDITY" value="0x0D05" description="Multilevel Sensor; Humidity"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_VELOCITY" value="0x0D06" description="Multilevel Sensor; Velocity"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_DIRECTION" value="0x0D07" description="Multilevel Sensor; Direction"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_ATMOSPHERIC_PRESSURE" value="0x0D08" description="Multilevel Sensor; Atmospheric Pressure"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_BAROMETRIC_PRESSURE" value="0x0D09" description="Multilevel Sensor; Barometric Pressure"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_SOLAR_RADIATION" value="0x0D0A" description="Multilevel Sensor; Solar Radiation"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_DEW_POINT" value="0x0D0B" description="Multilevel Sensor; Dew Point"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_RAIN_RATE" value="0x0D0C" description="Multilevel Sensor; Rain Rate"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_TIDE_LEVEL" value="0x0D0D" description="Multilevel Sensor; Tide Level"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_WEIGHT" value="0x0D0E" description="Multilevel Sensor; Weight"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_VOLTAGE" value="0x0D0F" description="Multilevel Sensor; Voltage"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_CURRENT" value="0x0D10" description="Multilevel Sensor; Current"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_CO2_LEVEL" value="0x0D11" description="Multilevel Sensor; CO2 Level"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_AIR_FLOW" value="0x0D12" description="Multilevel Sensor; Air Flow"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_TANK_CAPACITY" value="0x0D13" description="Multilevel Sensor; Tank Capacity"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_DISTANCE" value="0x0D14" description="Multilevel Sensor; Distance"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_ANGLE_POSITION" value="0x0D15" description="Multilevel Sensor; Angle Position"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_ROTATION" value="0x0D16" description="Multilevel Sensor; Rotation"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_WATER_TEMPERATURE" value="0x0D17" description="Multilevel Sensor; Water Temperature"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_SOIL_TEMPERATURE" value="0x0D18" description="Multilevel Sensor; Soil Temperature"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_SEISMIC_INTENSITY" value="0x0D19" description="Multilevel Sensor; Seismic Intensity"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_SEISMIC_MAGNITUDE" value="0x0D1A" description="Multilevel Sensor; Seismic Magnitude"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_ULTRAVIOLET" value="0x0D1B" description="Multilevel Sensor; Ultraviolet"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_ELECTRICAL_RESISTIVITY" value="0x0D1C" description="Multilevel Sensor; Electrical Resistivity"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_ELECTRICAL_CONDUCTIVITY" value="0x0D1D" description="Multilevel Sensor; Electrical Conductivity"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_LOUDNESS" value="0x0D1E" description="Multilevel Sensor; Loudness"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_MOISTURE" value="0x0D1F" description="Multilevel Sensor; Moisture"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_FREQUENCY" value="0x0D20" description="Multilevel Sensor; Frequency"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_TIME" value="0x0D21" description="Multilevel Sensor; Time"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_TARGET_TEMPERATURE" value="0x0D22" description="Multilevel Sensor; Target Temperature"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_PARTICULATE_MATTER_2_5" value="0x0D23" description="Multilevel Sensor: Particulate Matter 2.5"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_FORMALDEHYDE_CH2O_LEVEL" value="0x0D24" description="Multilevel Sensor: Formaldehyde CH2O-level"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_RADON_CONCENTRATION" value="0x0D25" description="Multilevel Sensor: Radon Concentration"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_METHANE_DENSITY" value="0x0D26" description="Multilevel Sensor: Methane (CH4) density"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_VOLATILE_ORGANIC_COMPOUND_LEVEL" value="0x0D27" description="Multilevel Sensor: Volatile Organic Compound level"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_CARBON_MONOXIDE_LEVEL" value="0x0D28" description="Multilevel Sensor: Carbon Monoxide level"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_SOIL_HUMIDITY" value="0x0D29" description="Multilevel Sensor: Soil Humidity"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_SOIL_REACTIVITY" value="0x0D2A" description="Multilevel Sensor: Soil Reactivity"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_SOIL_SALINITY" value="0x0D2B" description="Multilevel Sensor: Soil Salinity"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_HEART_RATE" value="0x0D2C" description="Multilevel Sensor: Heart Rate"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_BLOOD_PRESSURE" value="0x0D2D" description="Multilevel Sensor: Blood Pressure"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_MUSCLE_MASS" value="0x0D2E" description="Multilevel Sensor: Muscle Mass"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_FAT_MASS" value="0x0D2F" description="Multilevel Sensor: Fat Mass"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_BONE_MASS" value="0x0D30" description="Multilevel Sensor: Bone Mass"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_TOTAL_BODY_WATER" value="0x0D31" description="Multilevel Sensor: Total Body Water"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_BASIS_METABOLIC_RATE" value="0x0D32" description="Multilevel Sensor: Basis Metabolic Rate"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_BODY_MASS_INDEX" value="0x0D33" description="Multilevel Sensor: Body Mass Index"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_ACCELERATION_X_AXIS" value="0x0D34" description="Multilevel Sensor: Acceleration X Axis"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_ACCELERATION_Y_AXIS" value="0x0D35" description="Multilevel Sensor: Acceleration Y Axis"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_ACCELERATION_Z_AXIS" value="0x0D36" description="Multilevel Sensor: Acceleration Z Axis"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_SMOKE_DENSITY" value="0x0D37" description="Multilevel Sensor: Smoke Density"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_WATER_FLOW" value="0x0D38" description="Multilevel Sensor: Water Flow"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_WATER_DENSITY" value="0x0D39" description="Multilevel Sensor: Water Pressure"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_RF_SIGNAL_STRENGTH" value="0x0D3A" description="Multilevel Sensor: Signal Strength"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_PARTICULATE_MATTER_10" value="0x0D3B" description="Multilevel Sensor: particulate Matter 10"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_RESPIRATORY_RATE" value="0x0D3C" description="Multilevel Sensor: Respiratory Rate"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_RELATIVE_MODULATION_LEVEL" value="0x0D3D" description="Multilevel Sensor: Relative Modulation Level"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_BOILER_WATER_TEMPERATURE" value="0x0D3E" description="Multilevel Sensor: Boiler Water Temperature"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_DOMESTIC_HOT_WATER_TEMPERATURE" value="0x0D3F" description="Multilevel Sensor: Domestic Hot Water temperature"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_OUTSIDE_TEMPERATURE" value="0x0D40" description="Multilevel Sensor: Outside temperature"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_EXHAUST_TEMPERATURE" value="0x0D41" description="Multilevel Sensor: Exhaust temperature"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_WATER_CHLORINE_LEVEL" value="0x0D42" description="Multilevel Sensor: Water Chlorine level"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_WATER_ACIDITY" value="0x0D43" description="Multilevel Sensor: Water Acidity"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_WATER_OXIDATION_REDUCTION_POTENTIAL" value="0x0D44" description="Multilevel Sensor: Water Oxidation reduction potential"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_MULTILEVEL_MULTIDEVICE" value="0x0DFF" description="Multilevel Sensor; Bundled Sensors. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing multiple sensor functions. A user interface should not show the root device. Individual End Points of the multi-sensor device may be assigned any sensor icon"/>
+    <Icon name="ICON_TYPE_GENERIC_SET_TOP_BOX" value="0x0E00" description="Set Top Box"/>
+    <Icon name="ICON_TYPE_GENERIC_SIREN" value="0x0F00" description="Siren"/>
+    <Icon name="ICON_TYPE_GENERIC_SUB_ENERGY_METER" value="0x1000" description="Sub Energy Meter. NOTE: This icon type represents a meter. Early versions of this list suggested a sample icon which depicted a multilevel sensor style device."/>
+    <Icon name="ICON_TYPE_GENERIC_SUB_SYSTEM_CONTROLLER" value="0x1100" description="Sub System Controller"/>
+    <Icon name="ICON_TYPE_GENERIC_THERMOSTAT" value="0x1200" description="Thermostat. This version is generic and may be used in place for all specific variants."/>
+    <Icon name="ICON_TYPE_SPECIFIC_THERMOSTAT_LINE_VOLTAGE" value="0x1201" description="Thermostat, Line Voltage switching. This version is explicitly intended to represent line voltage thermostats. A line voltage thermostat is directly switching the system power. It is most commonly used for electric space heaters."/>
+    <Icon name="ICON_TYPE_SPECIFIC_THERMOSTAT_SETBACK" value="0x1202" description="Thermostat; Setback type. This version is explicitly intended to represent programmable thermostats. A setback thermostat may reduce or increase the temperature at different times of the day."/>
+    <Icon name="ICON_TYPE_GENERIC_THERMOSTAT_SETBACK_OBSOLETED" value="0x1300" description="Thermostat; Setback type [OBSOLETED]"/>
+    <Icon name="ICON_TYPE_GENERIC_TV" value="0x1400" description="TV"/>
+    <Icon name="ICON_TYPE_GENERIC_VALVE_OPEN_CLOSE" value="0x1500" description="Valve; Open/Close type"/>
+    <Icon name="ICON_TYPE_GENERIC_WALL_CONTROLLER" value="0x1600" description="Wall Controller. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing a wall controller. A user interface should not show the root device. The user icon type of each wall controller End Point should be either ICON_TYPE_GENERIC_LIGHT_DIMMER_SWITCH, ICON_TYPE_GENERIC_ON_OFF_POWER_SWITCH."/>
+    <Icon name="ICON_TYPE_GENERIC_WHOLE_HOME_METER_SIMPLE" value="0x1700" description="Whole Home Meter; Simple"/>
+    <Icon name="ICON_TYPE_GENERIC_WINDOW_COVERING_NO_POSITION_ENDPOINT" value="0x1800" description="Window Covering; No Position/Endpoint"/>
+    <Icon name="ICON_TYPE_GENERIC_WINDOW_COVERING_ENDPOINT_AWARE" value="0x1900" description="Window Covering; Endpoint Aware"/>
+    <Icon name="ICON_TYPE_GENERIC_WINDOW_COVERING_POSITION_ENDPOINT_AWARE" value="0x1A00" description="Window Covering; Position/Endpoint Aware"/>
+    <Icon name="ICON_TYPE_GENERIC_REPEATER" value="0x1B00" description="Repeater. This icon is intended for the installer and user icon types in a repeater device. In a special case, this icon type may be used for a Multi Channel End Point that represents the radio interface; for instance if the radio interface has its own battery power supply. An installer interface should show this icon. A user interface should not show this icon."/>
+    <Icon name="ICON_TYPE_SPECIFIC_REPEATER_END_NODE" value="0x1B01" description="Basic repeater End Node"/>
+    <Icon name="ICON_TYPE_SPECIFIC_IR_REPEATER" value="0x1B03" description="IR Repeater"/>
+    <Icon name="ICON_TYPE_GENERIC_DIMMER_WALL_SWITCH" value="0x1C00" description="Dimmer Wall Switch. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing a wall controller. A user interface should not show the root device. The user icon type of each wall controller End Point should be either ICON_TYPE_GENERIC_LIGHT_DIMMER_SWITCH, ICON_TYPE_GENERIC_ON_OFF_POWER_SWITCH."/>
+    <Icon name="ICON_TYPE_SPECIFIC_DIMMER_WALL_SWITCH_ONE_BUTTON" value="0x1C01" description="Dimmer Wall Switch, 1 button. This icon is intended for the installer icon type of a Multi Channel End Point in a wall controller - or of the root device of a one-button wall controller."/>
+    <Icon name="ICON_TYPE_SPECIFIC_DIMMER_WALL_SWITCH_TWO_BUTTONS" value="0x1C02" description="Dimmer Wall Switch, 2 buttons. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing a wall controller. A user interface should not show the root device."/>
+    <Icon name="ICON_TYPE_SPECIFIC_DIMMER_WALL_SWITCH_THREE_BUTTONS" value="0x1C03" description="Dimmer Wall Switch, 3 buttons. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing a wall controller. A user interface should not show the root device."/>
+    <Icon name="ICON_TYPE_SPECIFIC_DIMMER_WALL_SWITCH_FOUR_BUTTONS" value="0x1C04" description="Dimmer Wall Switch, 4 buttons. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing a wall controller. A user interface should not show the root device."/>
+    <Icon name="ICON_TYPE_SPECIFIC_DIMMER_WALL_SWITCH_ONE_ROTARY" value="0x1CF1" description="Dimmer Wall Switch, 1 rotary knob. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing a wall controller. A user interface should not show the root device."/>
+    <Icon name="ICON_TYPE_GENERIC_ON_OFF_WALL_SWITCH" value="0x1D00" description="On/Off Wall Switch. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing a wall controller. A user interface should not show the root device. The user icon type of each wall controller End Point should be either ICON_TYPE_GENERIC_LIGHT_DIMMER_SWITCH, ICON_TYPE_GENERIC_ON_OFF_POWER_SWITCH."/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_WALL_SWITCH_ONE_BUTTON" value="0x1D01" description="On/Off Wall Switch, 1 button. This icon is intended for the installer icon type of a Multi Channel End Point in a wall controller - or of the root device of a one-button wall controller."/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_WALL_SWITCH_TWO_BUTTONS" value="0x1D02" description="On/Off Wall Switch, 2 buttons. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing a wall controller. A user interface should not show the root device."/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_WALL_SWITCH_THREE_BUTTONS" value="0x1D03" description="On/Off Wall Switch, 3 buttons. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing a wall controller. A user interface should not show the root device."/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_WALL_SWITCH_FOUR_BUTTONS" value="0x1D04" description="On/Off Wall Switch, 4 buttons. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing a wall controller. A user interface should not show the root device."/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_WALL_SWITCH_DOOR_BELL" value="0x1DE1" description="Door Bell (button). This icon is intended for the installer and user icon types of a Door Bell user input device, i.e. the device which sits next to the door on the outside. The device may communicate to e.g. a gateway or a siren."/>
+    <Icon name="ICON_TYPE_SPECIFIC_ON_OFF_WALL_SWITCH_ONE_ROTARY" value="0x1DF1" description="Wall Switch, 1 rotary knob. This icon is intended for the installer and user icon types in the root device of a Multi Channel device implementing a wall controller. A user interface should not show the root device."/>
+    <Icon name="ICON_TYPE_GENERIC_BARRIER" value="0x1E00" description="Barrier. This icon is intended for the installer and user icon types of an access control system"/>
+    <Icon name="ICON_TYPE_GENERIC_IRRIGATION" value="0x1F00" description="Irrigation. This icon is intended for the installer and user icon types of an irrigation control system"/>
+    <Icon name="ICON_TYPE_GENERIC_ENTRY_CONTROL" value="0x2000" description="Entry Control. This icon is intended for the installer and user icon types of an entry control system"/>
+    <Icon name="ICON_TYPE_SPECIFIC_ENTRY_CONTROL_KEYPAD_0_9" value="0x2001" description="Entry Control Keypad 0-9"/>
+    <Icon name="ICON_TYPE_SPECIFIC_ENTRY_CONTROL_RFID_TAG_READER_NO_BUTTON" value="0x2002" description="Entry Control RFID tag reader, no button"/>
+    <Icon name="ICON_TYPE_SPECIFIC_ENTRY_CONTROL_KEYPAD_0_9_OK_CANCEL" value="0x2003" description="Entry control keypad 0-9 with ok and cancel buttons"/>
+    <Icon name="ICON_TYPE_SPECIFIC_ENTRY_CONTROL_KEYPAD_0_9_OK_CANCEL_HOME_STAY_AWAY" value="0x2004" description="Entry control keypad 0-9 with ok, cancel, home, stay and away buttons"/>
+    <Icon name="ICON_TYPE_GENERIC_SENSOR_NOTIFICATION_HOME_SECURITY" value="0x2100" description="Home Security Alarm"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_HOME_SECURITY_INTRUSION" value="0x2101" description="Home Security Alarm::Intrusion"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SENSOR_NOTIFICATION_HOME_SECURITY_GLASS_BREAKAGE" value="0x2102" description="Home Security Alarm::Glass Breakage"/>
+    <Icon name="ICON_TYPE_GENERIC_SOUND_SWITCH" value="0x2200" description="Sound Switch"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SOUND_SWITCH_DOORBELL" value="0x2201" description="Doorbell sound switch"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SOUND_SWITCH_CHIME" value="0x2202" description="Chime sound switch"/>
+    <Icon name="ICON_TYPE_SPECIFIC_SOUND_SWITCH_ALARM_CLOCK" value="0x2203" description="Alarm clock sound switch"/>
+  </Icons>
+</ZWavePlus>

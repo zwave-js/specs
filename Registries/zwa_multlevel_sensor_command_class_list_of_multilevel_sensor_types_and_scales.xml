@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+SPDX-License-Identifier: BSD-3-Clause
+SPDX-FileCopyrightText: 2025 Z-Wave-Alliance <https://z-wavealliance.org/>
+-->
+<SensorMultilevel>
+  <SensorType id="0x00" reserved="true">
+    <Scale id="0x00" reserved="true"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x01" name="Air temperature" byte="1" bit="0">
+    <Scale id="0x00" name="Celsius" unit="°C" version="1"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="1"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x02" name="General purpose" deprecated="true" byte="1" bit="1">
+    <Scale id="0x00" name="Percentage value" unit="%" version="1"/>
+    <Scale id="0x01" name="Dimensionless value" unit="" version="1"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x03" name="Illuminance" byte="1" bit="2">
+    <Scale id="0x00" name="Percentage value" unit="%" version="1"/>
+    <Scale id="0x01" name="Lux" unit="lux" version="1"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x04" name="Power" byte="1" bit="3">
+    <Scale id="0x00" name="Watt" unit="W" version="2"/>
+    <Scale id="0x01" name="Btu/h" unit="btu/h" version="2"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x05" name="Humidity" byte="1" bit="4">
+    <Scale id="0x00" name="Percentage value" unit="%" version="2"/>
+    <Scale id="0x01" name="Absolute humidity" unit="g/m³" version="5"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x06" name="Velocity" byte="1" bit="5">
+    <Scale id="0x00" name="Meter per second" unit="m/s" version="2"/>
+    <Scale id="0x01" name="Miles per hour" unit="mph" version="2"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x07" name="Direction" byte="1" bit="6">
+    <Scale id="0x00" name="Degrees" unit="°" version="2" description="0 to 360 degrees, 0 = no motion detected, 90 = east, 180 = south, 270 = west and 360 = north"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x08" name="Atmospheric pressure" byte="1" bit="7">
+    <Scale id="0x00" name="Kilopascal" unit="kPa" version="2"/>
+    <Scale id="0x01" name="Inches of Mercury" unit="inHg" version="2"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x09" name="Barometric pressure" byte="2" bit="0">
+    <Scale id="0x00" name="Kilopascal" unit="kPa" version="2"/>
+    <Scale id="0x01" name="Inches of Mercury" unit="inHg" version="2"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x0A" name="Solar radiation" byte="2" bit="1">
+    <Scale id="0x00" name="Watt per square meter" unit="W/m²" version="2"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x0B" name="Dew point" byte="2" bit="2">
+    <Scale id="0x00" name="Celsius" unit="°C" version="1"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="1"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x0C" name="Rain rate" byte="2" bit="3">
+    <Scale id="0x00" name="Millimeter per hour" unit="mm/h" version="2"/>
+    <Scale id="0x01" name="Inches per hour" unit="in/h" version="2"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x0D" name="Tide level" byte="2" bit="4">
+    <Scale id="0x00" name="Meter" unit="m" version="2"/>
+    <Scale id="0x01" name="Feet" unit="ft" version="2"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x0E" name="Weight" byte="2" bit="5">
+    <Scale id="0x00" name="Kilogram" unit="kg" version="3"/>
+    <Scale id="0x01" name="Pounds" unit="lb" version="3"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x0F" name="Voltage" byte="2" bit="6">
+    <Scale id="0x00" name="Volt" unit="V" version="3"/>
+    <Scale id="0x01" name="Millivolt" unit="mV" version="3"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x10" name="Current" byte="2" bit="7">
+    <Scale id="0x00" name="Ampere" unit="A" version="3"/>
+    <Scale id="0x01" name="Milliampere" unit="mA" version="3"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x11" name="Carbon dioxide (CO2-level)" byte="3" bit="0">
+    <Scale id="0x00" name="Parts per million" unit="ppm" version="3"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x12" name="Air flow" byte="3" bit="1">
+    <Scale id="0x00" name="Cubic meter per hour" unit="m³/h" version="3"/>
+    <Scale id="0x01" name="Cubic feet per minute" unit="cfm" version="3"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x13" name="Tank capacity" byte="3" bit="2">
+    <Scale id="0x00" name="Liter" unit="l" version="3"/>
+    <Scale id="0x01" name="Cubic meter" unit="m³" version="3"/>
+    <Scale id="0x02" name="Gallons" unit="gal" version="3"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x14" name="Distance" byte="3" bit="3">
+    <Scale id="0x00" name="Meter" unit="m" version="3"/>
+    <Scale id="0x01" name="Centimeter" unit="cm" version="3"/>
+    <Scale id="0x02" name="Feet" unit="ft" version="3"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x15" name="Angle position" deprecated="true" byte="3" bit="4">
+    <Scale id="0x00" name="Percentage value" unit="%" version="4-7"/>
+    <Scale id="0x01" name="Degrees relative to north pole" unit="°" version="4-7"/>
+    <Scale id="0x02" name="Degrees relative to north pole" unit="°" version="4-7"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x16" name="Rotation" byte="3" bit="5">
+    <Scale id="0x00" name="Revolutions per minute" unit="rpm" version="5"/>
+    <Scale id="0x01" name="Hertz" unit="Hz" version="5"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x17" name="Water temperature" byte="3" bit="6">
+    <Scale id="0x00" name="Celsius" unit="°C" version="5"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="5"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x18" name="Soil temperature" byte="3" bit="7">
+    <Scale id="0x00" name="Celsius" unit="°C" version="5"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="5"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x19" name="Seismic Intensity" byte="4" bit="0">
+    <Scale id="0x00" name="Mercalli" unit="" version="5"/>
+    <Scale id="0x01" name="European Macroseismic" unit="" version="5"/>
+    <Scale id="0x02" name="Liedu" unit="" version="5"/>
+    <Scale id="0x03" name="Shindo" unit="" version="5"/>
+  </SensorType>
+  <SensorType id="0x1A" name="Seismic magnitude" byte="4" bit="1">
+    <Scale id="0x00" name="Local" unit="" version="5"/>
+    <Scale id="0x01" name="Moment" unit="" version="5"/>
+    <Scale id="0x02" name="Surface wave" unit="" version="5"/>
+    <Scale id="0x03" name="Body wave" unit="" version="5"/>
+  </SensorType>
+  <SensorType id="0x1B" name="Ultraviolet" byte="4" bit="2">
+    <Scale id="0x00" name="UV index" unit="" version="5"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x1C" name="Electrical resistivity" byte="4" bit="3">
+    <Scale id="0x00" name="Ohm meter" unit="Ωm" version="5"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x1D" name="Electrical conductivity" byte="4" bit="4">
+    <Scale id="0x00" name="Siemens per meter" unit="S/m" version="5"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x1E" name="Loudness" byte="4" bit="5">
+    <Scale id="0x00" name="Decibel" unit="dB" version="5"/>
+    <Scale id="0x01" name="A-weighted decibels" unit="dBA" version="5"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x1F" name="Moisture" byte="4" bit="6">
+    <Scale id="0x00" name="Percentage value" unit="%" version="5"/>
+    <Scale id="0x01" name="Volume water content" unit="m³/m³" version="5"/>
+    <Scale id="0x02" name="Impedance" unit="kΩ" version="5"/>
+    <Scale id="0x03" name="Water activity" unit="aw" version="5"/>
+  </SensorType>
+  <SensorType id="0x20" name="Frequency" byte="4" bit="7">
+    <Scale id="0x00" name="Hertz" unit="Hz" version="6" description="MUST be used until 2.147483647 GHz"/>
+    <Scale id="0x01" name="Kilohertz" unit="kHz" version="6" description="MUST be used after 2.147483647 GHz"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x21" name="Time" byte="5" bit="0">
+    <Scale id="0x00" name="Second" unit="s" version="6"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x22" name="Target temperature" byte="5" bit="1">
+    <Scale id="0x00" name="Celsius" unit="°C" version="6"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="6"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x23" name="Particulate Matter 2.5" byte="5" bit="2">
+    <Scale id="0x00" name="Mole per cubic meter" unit="mol/m³" version="7"/>
+    <Scale id="0x01" name="Microgram per cubic meter" unit="µg/m³" version="7"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x24" name="Formaldehyde (CH2O-level)" byte="5" bit="3">
+    <Scale id="0x00" name="Mole per cubic meter" unit="mol/m³" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x25" name="Radon concentration" byte="5" bit="4">
+    <Scale id="0x00" name="Becquerel per cubic meter" unit="Bq/m³" version="7"/>
+    <Scale id="0x01" name="Picocuries per liter" unit="pCi/l" version="7"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x26" name="Methane (CH4) density" byte="5" bit="5">
+    <Scale id="0x00" name="Mole per cubic meter" unit="mol/m³" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x27" name="Volatile Organic Compound level" byte="5" bit="6">
+    <Scale id="0x00" name="Mole per cubic meter" unit="mol/m³" version="7"/>
+    <Scale id="0x01" name="Parts per million" unit="ppm" version="10"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x28" name="Carbon monoxide (CO) level" byte="5" bit="7">
+    <Scale id="0x00" name="Mole per cubic meter" unit="mol/m³" version="7"/>
+    <Scale id="0x01" name="Parts per million" unit="ppm" version="10"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x29" name="Soil humidity" byte="6" bit="0">
+    <Scale id="0x00" name="Percentage value" unit="%" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x2A" name="Soil reactivity" byte="6" bit="1">
+    <Scale id="0x00" name="Acidity" unit="pH" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x2B" name="Soil salinity" byte="6" bit="2">
+    <Scale id="0x00" name="Mole per cubic meter" unit="mol/m³" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x2C" name="Heart rate" byte="6" bit="3">
+    <Scale id="0x00" name="Beats per minute" unit="bpm" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x2D" name="Blood pressure" byte="6" bit="4">
+    <Scale id="0x00" name="Systolic" unit="mmHg" version="7"/>
+    <Scale id="0x01" name="Diastolic" unit="mmHg" version="7"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x2E" name="Muscle mass" byte="6" bit="5">
+    <Scale id="0x00" name="Kilogram" unit="kg" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x2F" name="Fat mass" byte="6" bit="6">
+    <Scale id="0x00" name="Kilogram" unit="kg" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x30" name="Bone mass" byte="6" bit="7">
+    <Scale id="0x00" name="Kilogram" unit="kg" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x31" name="Total body water (TBW)" byte="7" bit="0">
+    <Scale id="0x00" name="Kilogram" unit="kg" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x32" name="Basis metabolic rate (BMR)" byte="7" bit="1">
+    <Scale id="0x00" name="Joule" unit="J" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x33" name="Body Mass Index (BMI)" byte="7" bit="2">
+    <Scale id="0x00" name="BMI Index" unit="" version="7"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x34" name="Acceleration X-axis" byte="7" bit="3">
+    <Scale id="0x00" name="Meter per square second" unit="m/s²" version="8"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x35" name="Acceleration Y-axis" byte="7" bit="4">
+    <Scale id="0x00" name="Meter per square second" unit="m/s²" version="8"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x36" name="Acceleration Z-axis" byte="7" bit="5">
+    <Scale id="0x00" name="Meter per square second" unit="m/s²" version="8"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x37" name="Smoke density" byte="7" bit="6">
+    <Scale id="0x00" name="Percentage value" unit="%" version="8"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x38" name="Water flow" byte="7" bit="7">
+    <Scale id="0x00" name="Liter per hour" unit="l/h" version="9"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x39" name="Water pressure" byte="8" bit="0">
+    <Scale id="0x00" name="Kilopascal" unit="kPa" version="9"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x3A" name="RF signal strength" byte="8" bit="1">
+    <Scale id="0x00" name="RSSI" unit="%" version="9"/>
+    <Scale id="0x01" name="dBm" unit="dBm" version="9"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x3B" name="Particulate Matter 10" byte="8" bit="2">
+    <Scale id="0x00" name="Mole per cubic meter" unit="mol/m³" version="10"/>
+    <Scale id="0x01" name="Microgram per cubic meter" unit="µg/m³" version="10"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x3C" name="Respiratory rate" byte="8" bit="3">
+    <Scale id="0x00" name="Breaths per minute" unit="bpm" version="10"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x3D" name="Relative Modulation level" byte="8" bit="4">
+    <Scale id="0x00" name="Percentage value" unit="%" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x3E" name="Boiler water temperature" byte="8" bit="5">
+    <Scale id="0x00" name="Celsius" unit="°C" version="11"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x3F" name="Domestic Hot Water (DHW) temperature" byte="8" bit="6">
+    <Scale id="0x00" name="Celsius" unit="°C" version="11"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x40" name="Outside temperature" byte="8" bit="7">
+    <Scale id="0x00" name="Celsius" unit="°C" version="11"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x41" name="Exhaust temperature" byte="9" bit="0">
+    <Scale id="0x00" name="Celsius" unit="°C" version="11"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x42" name="Water Chlorine level" byte="9" bit="1">
+    <Scale id="0x00" name="Milligram per liter" unit="mg/l" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x43" name="Water acidity" byte="9" bit="2">
+    <Scale id="0x00" name="Acidity" unit="pH" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x44" name="Water Oxidation reduction potential" byte="9" bit="3">
+    <Scale id="0x00" name="MilliVolt" unit="mV" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x45" name="Heart Rate LF/HF ratio" byte="9" bit="4">
+    <Scale id="0x00" name="Unitless" unit="" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x46" name="Motion Direction" byte="9" bit="5">
+    <Scale id="0x00" name="Degrees" unit="°" version="11" description="0 to 360 degrees, 0 = no motion detected, 90 = east, 180 = south, 270 = west and 360 = north"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x47" name="Applied force on the sensor" byte="9" bit="6">
+    <Scale id="0x00" name="Newton" unit="N" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x48" name="Return Air temperature" byte="9" bit="7">
+    <Scale id="0x00" name="Celsius" unit="°C" version="11"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x49" name="Supply Air temperature" byte="10" bit="0">
+    <Scale id="0x00" name="Celsius" unit="°C" version="11"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x4A" name="Condenser Coil temperature" byte="10" bit="1">
+    <Scale id="0x00" name="Celsius" unit="°C" version="11"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x4B" name="Evaporator Coil temperature" byte="10" bit="2">
+    <Scale id="0x00" name="Celsius" unit="°C" version="11"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x4C" name="Liquid Line temperature" byte="10" bit="3">
+    <Scale id="0x00" name="Celsius" unit="°C" version="11"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x4D" name="Discharge Line temperature" byte="10" bit="4">
+    <Scale id="0x00" name="Celsius" unit="°C" version="11"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x4E" name="Suction (input pump/compressor) Pressure" byte="10" bit="5">
+    <Scale id="0x00" name="Kilopascal" unit="kPa" version="11"/>
+    <Scale id="0x01" name="Pound per square inch" unit="psi" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x4F" name="Discharge (output pump/compressor) Pressure" byte="10" bit="6">
+    <Scale id="0x00" name="Kilopascal" unit="kPa" version="11"/>
+    <Scale id="0x01" name="Pound per square inch" unit="psi" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x50" name="Defrost temperature (sensor used to decide when to defrost)" byte="10" bit="7">
+    <Scale id="0x00" name="Celsius" unit="°C" version="11"/>
+    <Scale id="0x01" name="Fahrenheit" unit="°F" version="11"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x51" name="Ozone (O3)" byte="11" bit="0">
+    <Scale id="0x00" name="Micro gram per cubic meter" unit="μg/m³" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x52" name="Sulfur dioxide (SO2)" byte="11" bit="1">
+    <Scale id="0x00" name="Micro gram per cubic meter" unit="μg/m³" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x53" name="Nitrogen dioxide (NO2)" byte="11" bit="2">
+    <Scale id="0x00" name="Micro gram per cubic meter" unit="μg/m³" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x54" name="Ammonia (NH3)" byte="11" bit="3">
+    <Scale id="0x00" name="Micro gram per cubic meter" unit="μg/m³" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x55" name="Lead (Pb)" byte="11" bit="4">
+    <Scale id="0x00" name="Micro gram per cubic meter" unit="μg/m³" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x56" name="Particulate Matter 1" byte="11" bit="5">
+    <Scale id="0x00" name="Micro gram per cubic meter" unit="μg/m³" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x57" name="Person counter (entering)" byte="11" bit="6">
+    <Scale id="0x00" name="Unitless" unit="" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+  <SensorType id="0x58" name="Person counter (exiting)" byte="11" bit="7">
+    <Scale id="0x00" name="Unitless" unit="" version="11"/>
+    <Scale id="0x01" reserved="true"/>
+    <Scale id="0x02" reserved="true"/>
+    <Scale id="0x03" reserved="true"/>
+  </SensorType>
+</SensorMultilevel>

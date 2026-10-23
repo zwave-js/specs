@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-License-Identifier: BSD-3-Clause
+SPDX-FileCopyrightText: 2022–2025 Z-Wave-Alliance <https://z-wavealliance.org/>
+-->
+<command_classes>
+  <command_class id="0xA4" name="COMMAND_CLASS_ACTIVE_SCHEDULE">
+    <commands>
+      <command id="0x05" name="ACTIVE_SCHEDULE_ENABLE_REPORT" comment="This command MUST be issued by a node when the schedule state for a target has been altered from any source."/>
+      <command id="0x08" name="ACTIVE_SCHEDULE_YEAR_DAY_SCHEDULE_REPORT" comment="This command MUST be issued by a node when schedule data has been altered from any source."/>
+      <command id="0x0B" name="ACTIVE_SCHEDULE_DAILY_REPEATING_SCHEDULE_REPORT" comment="This command MUST be issued by a node when schedule data has been altered from any source."/>
+    </commands>
+  </command_class>
+  <command_class id="0x66" name="COMMAND_CLASS_BARRIER_OPERATOR">
+    <commands>
+      <command id="0x03" name="BARRIER_OPERATOR_REPORT" comment="This command MUST be issued by a node when the barrier has finished a transition (e.g. from Open to Close) and reached a final state"/>
+      <command id="0x08" name="BARRIER_OPERATOR_EVENT_SIGNALING_REPORT" comment="This command MUST be issued when a subsystem state has changed."/>
+    </commands>
+  </command_class>
+  <command_class id="0x80" name="COMMAND_CLASS_BATTERY">
+    <commands>
+      <command id="0x03" name="BATTERY_REPORT" comment="This command MUST be issued by a node in two different cases: periodically to report the current battery level where the frequency is up to the implementation, and when its battery becomes low and the end user needs to reload or replace the battery. The Battery Level field MUST be set to 0xFF to indicate a low battery warning."/>
+    </commands>
+  </command_class>
+  <command_class id="0x25" name="COMMAND_CLASS_SWITCH_BINARY">
+    <commands>
+      <command id="0x03" name="SWITCH_BINARY_REPORT" comment="This command MUST be issued when the binary switch value has changed (and reached a final state)"/>
+    </commands>
+  </command_class>
+  <command_class id="0x5B" name="COMMAND_CLASS_CENTRAL_SCENE">
+    <commands>
+      <command id="0x03" name="CENTRAL_SCENE_NOTIFICATION" comment="This command MUST be issued by a node when a user actuated a Scene Notification button/method on the supporting node."/>
+      <command id="0x06" name="CENTRAL_SCENE_CONFIGURATION_REPORT" comment="This command MUST be issued by a node when its Central Scene Configuration has changed."/>
+    </commands>
+  </command_class>
+  <command_class id="0x81" name="COMMAND_CLASS_CLOCK">
+    <commands>
+      <command id="0x06" name="CLOCK_REPORT" comment="This command MUST be issued when the clock setting has been modified."/>
+    </commands>
+  </command_class>
+  <command_class id="0x33" name="COMMAND_CLASS_SWITCH_COLOR">
+    <commands>
+      <command id="0x04" name="SWITCH_COLOR_REPORT" comment="This command MUST be issued when a color component level has changed."/>
+    </commands>
+  </command_class>
+  <command_class id="0x62" name="COMMAND_CLASS_DOOR_LOCK">
+    <commands>
+      <command id="0x03" name="DOOR_LOCK_OPERATION_REPORT" comment="This command MUST be issued by a node when it has completed a lock/unlock operation initiated locally."/>
+      <command id="0x06" name="DOOR_LOCK_CONFIGURATION_REPORT" comment="This command MUST be issued by when the Door Lock configuration has changed."/>
+    </commands>
+  </command_class>
+  <command_class id="0x5A" name="COMMAND_CLASS_DEVICE_RESET_LOCALLY">
+    <commands>
+      <command id="0x01" name="DEVICE_RESET_LOCALLY_NOTIFICATION" comment="This command MUST be issued by a node when it has been locally or manually reset to factory default."/>
+    </commands>
+  </command_class>
+  <command_class id="0x6F" name="COMMAND_CLASS_ENTRY_CONTROL">
+    <commands>
+      <command id="0x01" name="ENTRY_CONTROL_NOTIFICATION" comment="This command MUST be issued by a node when a user input has exceeded key cache size or key cache timeout."/>
+    </commands>
+  </command_class>
+  <command_class id="0x6B" name="COMMAND_CLASS_IRRIGATION">
+    <commands>
+      <command id="0x04" name="IRRIGATION_SYSTEM_STATUS_REPORT" comment="This command MUST be issued when a system error has occured."/>
+    </commands>
+  </command_class>
+  <command_class id="0x87" name="COMMAND_CLASS_INDICATOR">
+    <commands>
+      <command id="0x03" name="INDICATOR_REPORT" comment="This command SHOULD be issued when an indicator property has changed."/>
+    </commands>
+  </command_class>
+  <command_class id="0x32" name="COMMAND_CLASS_METER">
+    <commands>
+      <command id="0x02" name="METER_REPORT" comment="This command MUST be issued periodically to report the current Meter reading. The sending frequency is up to the implementation. It is RECOMMENDED to implement a minimum reporting interval (for example, every 70 minutes) and send additional reports when a measurement variation occurred A node supporting multiple meter types MUST advertise readings for all of the supported types via the Lifeline Group. Each meter type MAY have a different timing mechanism for reporting its readings."/>
+    </commands>
+  </command_class>
+  <command_class id="0x31" name="COMMAND_CLASS_SENSOR_MULTILEVEL">
+    <commands>
+      <command id="0x05" name="SENSOR_MULTILEVEL_REPORT" comment="This command MUST be issued periodically to report the current Multilevel sensor reading. The sending frequency is up to the implementation. It is RECOMMENDED to implement a minimum reporting interval (for example, every 70 minutes) and send additional reports when a measurement variation occurred. A node supporting multiple sensor types MUST advertise readings for all of the supported types via the Lifeline Group. Each sensor type MAY have a different timing mechanism for reporting its readings."/>
+    </commands>
+  </command_class>
+  <command_class id="0x26" name="COMMAND_CLASS_SWITCH_MULTILEVEL">
+    <commands>
+      <command id="0x03" name="SWITCH_MULTILEVEL_REPORT" comment="This command MUST be issued when the multilevel switch value has changed (and reached a final state)"/>
+    </commands>
+  </command_class>
+  <command_class id="0x71" name="COMMAND_CLASS_NOTIFICATION">
+    <commands>
+      <command id="0x05" name="NOTIFICATION_REPORT" comment="This command MUST be issued by Push nodes every time a new event is detected or when a state variable has changed state."/>
+    </commands>
+  </command_class>
+  <command_class id="0x79" name="COMMAND_CLASS_SOUND_SWITCH">
+    <commands>
+      <command id="0x07" name="SOUND_SWITCH_CONFIGURATION_REPORT" comment="This command MUST be issued when volume or default tone has changed."/>
+      <command id="0x0A" name="SOUND_SWITCH_TONE_PLAY_REPORT" comment="This command MUST be issued when a tone has started playing."/>
+    </commands>
+  </command_class>
+  <command_class id="0x40" name="COMMAND_CLASS_THERMOSTAT_MODE">
+    <commands>
+      <command id="0x03" name="THERMOSTAT_MODE_REPORT" comment="This command MUST be issued when the Thermostat Mode has changed."/>
+    </commands>
+  </command_class>
+  <command_class id="0x47" name="COMMAND_CLASS_THERMOSTAT_SETBACK">
+    <commands>
+      <command id="0x03" name="THERMOSTAT_SETBACK_REPORT" comment="This command MUST be issued when the Thermostat Setback has changed."/>
+    </commands>
+  </command_class>
+  <command_class id="0x43" name="COMMAND_CLASS_THERMOSTAT_SETPOINT">
+    <commands>
+      <command id="0x03" name="THERMOSTAT_SETPOINT_REPORT" comment="This command MUST be issued when the Thermostat Setpoint setting has changed."/>
+    </commands>
+  </command_class>
+  <command_class id="0x63" name="COMMAND_CLASS_USER_CODE">
+    <commands>
+      <command id="0x03" name="USER_CODE_REPORT" comment="This command MUST be issued when a User Code record is modified."/>
+      <command id="0x0A" name="USER_CODE_KEYPAD_MODE_REPORT" comment="This command MUST be issued when the Keypad Mode has been modified."/>
+      <command id="0x10" name="ADMIN_CODE_REPORT" comment="This command MUST be issued when the Admin Code has been modified."/>
+      <command id="0x0D" name="EXTENDED_USER_CODE_REPORT" comment="This command MUST be issued when a User Code record with user identifier &gt; 255 has been modified."/>
+    </commands>
+  </command_class>
+  <command_class id="0x6A" name="COMMAND_CLASS_WINDOW_COVERING">
+    <commands>
+      <command id="0x04" name="WINDOW_COVERING_REPORT" comment="This command MUST be issued when a Parameter ID has changed value."/>
+    </commands>
+  </command_class>
+  <command_class id="0x83" name="COMMAND_CLASS_USER_CREDENTIAL">
+    <commands>
+      <command id="0x07" name="USER_REPORT" comment="This command MUST be issued when a User Credential - User record is modified."/>
+      <command id="0x0C" name="CREDENTIAL_REPORT" comment="This command MUST be issued when a User Credential - Credential record is modified."/>
+      <command id="0x13" name="USER_CREDENTIAL_ASSOCIATION_REPORT" comment="This command MUST be issued when an existing credential is successfully reassigned to another user."/>
+      <command id="0x1C" name="ADMIN_PIN_CODE_REPORT" comment="This command MUST be issued when the admin code has been modified."/>
+      <command id="0x21" name="KEY_LOCKER_ENTRY_REPORT" comment="This command MUST be issued when a key locker entry has been modified."/>
+    </commands>
+</command_classes>

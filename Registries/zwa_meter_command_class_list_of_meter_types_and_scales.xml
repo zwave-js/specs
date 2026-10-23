@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+SPDX-License-Identifier: BSD-3-Clause
+SPDX-FileCopyrightText: 2025 Z-Wave-Alliance <https://z-wavealliance.org/>
+-->
+
+<Meter>
+  
+  <!-- Meter Types -->
+  <MeterTypes title="Meter Types (6 bits)">
+    <MeterType name="Single-E electric meter" value="0x01" version="1" meterScaleType="Electric"/>
+    <MeterType name="Gas meter" value="0x02" version="1" meterScaleType="Volume"/>
+    <MeterType name="Water meter" value="0x03" version="1" meterScaleType="Volume"/>
+    <MeterType name="Twin-E electric meter" value="0x04" version="1" meterScaleType="Electric"/>
+    <MeterType name="3P Single Direct electric meter" value="0x05" version="1" meterScaleType="Electric"/>
+    <MeterType name="3P Single ECT electric meter" value="0x06" version="1" meterScaleType="Electric"/>
+    <MeterType name="1 Phase Direct Electricity Meter" value="0x07" version="1" meterScaleType="Electric"/>
+    <MeterType name="Heating meter" value="0x08" version="1" meterScaleType="Сalorimeter"/>
+    <MeterType name="Cooling meter" value="0x09" version="1" meterScaleType="Сalorimeter"/>
+    <MeterType name="Combined Heating and Cooling Meter" value="0x0A" version="1" meterScaleType="Сalorimeter"/>
+    <MeterType name="Electric Sub-Meter" value="0x0B" version="1" meterScaleType="ElectricSubMeter"/>
+  </MeterTypes>
+
+  <!-- Rate Types -->
+  <RateTypes title="Rate Types (2 bits)">
+    <RateType name="Unspecified" value="0x00" version="1"/>
+    <RateType name="Import (consumed)" value="0x01" version="1"/>
+    <RateType name="Export (produced)" value="0x02" version="1"/>
+    <RateType name="Reserved" value="0x03" version="-"/>
+  </RateTypes>
+
+  <!-- MeterScalesTypes -->
+  <MeterScalesTypes title="Meter Scales Types">
+    <MeterScalesType name="Electric">
+      <MeterScale name="kilowatt hours" unit="kWh" value="0x00" version="1"/>
+      <MeterScale name="kiloVolt-Ampere reactive hours" unit="kVARh" value="0x01" version="1"/>
+      <MeterScale name="Percentage" unit="%" value="0x02" version="1"/>
+      <MeterScale name="Pulse count" unit="unitless" value="0x03" version="1"/>
+      <MeterScale name="kiloVolt-Ampere reactive" unit="kVAR" value="0x04" version="1"/>
+      <MeterScale name="Voltage" unit="V" value="0x05" version="1"/>
+      <MeterScale name="Amperes" unit="A" value="0x06" version="1"/>
+      <MeterScale name="kilowatt" unit="kW" value="0x07" version="1"/>
+      <MeterScale name="Ratio" unit="unitless" value="0x08" version="1"/>
+    </MeterScalesType>
+
+    <MeterScalesType name="Volume">
+      <MeterScale name="Cubic meter" unit="m3" value="0x00" version="1"/>
+      <MeterScale name="Cubic feet" unit="ft3" value="0x01" version="1"/>
+      <MeterScale name="US gallon" unit="US gallon" value="0x02" version="1"/>
+      <MeterScale name="Pulse count" unit="unitless" value="0x03" version="1"/>
+      <MeterScale name="IMP gallon" unit="IMP gallon" value="0x04" version="1"/>
+      <MeterScale name="Liter" unit="l" value="0x05" version="1"/>
+      <MeterScale name="kiloPascal" unit="kPa" value="0x06" version="1"/>
+      <MeterScale name="Centum cubic feet" unit="CCF" value="0x07" version="1"/>
+      <MeterScale name="Cubic meter per hour" unit="m3/h" value="0x08" version="1"/>
+      <MeterScale name="Liter per hour" unit="l/h" value="0x09" version="1"/>
+      <MeterScale name="kilowatt hour" unit="kWh" value="0x0A" version="1"/>
+      <MeterScale name="megawatt hour" unit="MWh" value="0x0B" version="1"/>
+      <MeterScale name="kilowatt" unit="kW" value="0x0C" version="1"/>
+      <MeterScale name="hour" unit="h" value="0x0D" version="1"/>
+    </MeterScalesType>
+
+    <MeterScalesType name="Сalorimeter">
+      <MeterScale name="Cubic meter" unit="m3" value="0x00" version="1"/>
+      <MeterScale name="Tonne / Metric ton" unit="t=1000kg" value="0x01" version="1"/>
+      <MeterScale name="Cubic meter per hour" unit="m3/h" value="0x02" version="1"/>
+      <MeterScale name="Liter per hour" unit="l/h" value="0x03" version="1"/>
+      <MeterScale name="kilowatt" unit="kW" value="0x04" version="1"/>
+      <MeterScale name="megawatt" unit="MW" value="0x05" version="1"/>
+      <MeterScale name="kilowatt hour" unit="kWh" value="0x06" version="1"/>
+      <MeterScale name="megawatt hour" unit="MWh" value="0x07" version="1"/>
+      <MeterScale name="Giga Joule" unit="GJ" value="0x08" version="1"/>
+      <MeterScale name="Giga Calorie" unit="Gcal" value="0x09" version="1"/>
+      <MeterScale name="Degree Celsius" unit="°C" value="0x0A" version="1"/>
+      <MeterScale name="Degree Fahrenheit" unit="°F" value="0x0B" version="1"/>
+      <MeterScale name="hour" unit="h" value="0x0C" version="1"/>
+      <MeterScale name="volume-based temperature" unit="m3 x °C" value="0x0D" version="3"/>
+      <MeterScale name="kiloPascal" unit="kPa" value="0x0E" version="3"/>
+    </MeterScalesType>
+
+    <MeterScalesType name="ElectricSubMeter">
+      <MeterScale name="kilowatt hours" unit="kWh" value="0x00" version="1"/>
+      <MeterScale name="kiloVolt-Ampere reactive hours" unit="kVARh" value="0x01" version="1"/>
+      <MeterScale name="Percentage" unit="%" value="0x02" version="1"/>
+      <MeterScale name="Pulse count" unit="unitless" value="0x03" version="1"/>
+      <MeterScale name="kiloVolt-Ampere reactive" unit="kVAR" value="0x04" version="1"/>
+      <MeterScale name="Voltage" unit="V" value="0x05" version="1"/>
+      <MeterScale name="Amperes" unit="A" value="0x06" version="1"/>
+      <MeterScale name="kilowatt" unit="kW" value="0x07" version="1"/>
+      <MeterScale name="Ratio" unit="unitless" value="0x08" version="1"/>
+    </MeterScalesType>
+  </MeterScalesTypes>
+
+  <!-- MeterDatasetBitmask -->
+  <MeterDatasetBitmask title="Bitmask representation (24 bits)">
+    <!-- Electric Meters -->
+    <MeterScalesType name="Electric">
+      <Bitmask byte="1" bit="0" unit="kWh" version="1" description="Total Primary Active Energy. Energy delivered to the unit before transformation."/>
+      <Bitmask byte="1" bit="1" unit="kVARh" version="1" description="Total Primary Reactive Energy. Energy delivered to the unit before transformation."/>
+      <Bitmask byte="1" bit="2" unit="kVARh" version="1" description="Total Secondary Active Energy. Consumed energy after transformation."/>
+      <Bitmask byte="1" bit="3" unit="kVARh" version="1" description="Total Secondary Reactive Energy. Consumed energy after transformation."/>
+      <Bitmask byte="1" bit="4" unit="kW" version="1" description="Instantaneous Primary Active Power. Current power consumption."/>
+      <Bitmask byte="1" bit="5" unit="kvar" version="1" description="Instantaneous Primary Reactive Power. Current power consumption."/>
+      <Bitmask byte="1" bit="6" unit="kW" version="1" description="Primary Active Maximum Demand. All time maximum active power demand."/>
+      <Bitmask byte="1" bit="7" unit="kVAR" version="1" description="Primary Reactive Maximum Demand. All time maximum reactive power demand."/>
+      <Bitmask byte="2" bit="0" unit="kW" version="1" description="Cumulative Primary Active Maximum Demand. Accumulated power over period."/>
+      <Bitmask byte="2" bit="1" unit="kVAR" version="1" description="Cumulative Primary Reactive Maximum Demand. Accumulated power over period."/>
+      <Bitmask byte="2" bit="2" unit="V" version="1" description="Voltage Phase 1. Voltage measured on phase 1."/>
+      <Bitmask byte="2" bit="3" unit="V" version="1" description="Voltage Phase 2. Voltage measured on phase 2."/>
+      <Bitmask byte="2" bit="4" unit="V" version="1" description="Voltage Phase 3. Voltage measured on phase 3."/>
+      <Bitmask byte="2" bit="5" unit="A" version="1" description="Ampere Phase 1. Amperes measured on phase 1."/>
+      <Bitmask byte="2" bit="6" unit="A" version="1" description="Ampere Phase 2. Amperes measured on phase 2."/>
+      <Bitmask byte="2" bit="7" unit="A" version="1" description="Ampere Phase 3. Amperes measured on phase 3."/>
+      <Bitmask byte="3" bit="0" unit="Pulse Count" version="1" description="Pulse Input. Pulse count on pulse input port of meter."/>
+      <Bitmask byte="3" bit="1" unit="ratio" version="1" description="Current Transformation Ratio. Transformation ratio between primary and secondary energy."/>
+      <Bitmask byte="3" bit="2" unit="%" version="1" description="Power Factor. Power factor contains the ratio of real power to total power expressed as a percentage (-100 to +100)."/>
+    </MeterScalesType>
+
+    <!-- Gas/Water Meters -->
+    <MeterScalesType name="Volume">
+      <Bitmask byte="1" bit="0" unit="m3" version="1" description="Accumulated Volume. Total accumulated volume."/>
+      <Bitmask byte="1" bit="1" unit="l/h, m3/h" version="1" description="Current Flow. Current flow value."/>
+      <Bitmask byte="1" bit="2" unit="kPa" version="1" description="Current Pressure. Current pressure value."/>
+      <Bitmask byte="1" bit="3" unit="l/h, m3/h" version="1" description="Peak Flow. Peak flow demand recorded."/>
+      <Bitmask byte="1" bit="4" unit="h" version="1" description="Hour Counter. Hours in operation."/>
+      <Bitmask byte="1" bit="5" unit="m3/h, kW, m3, kWh, MWh, Pulse Count" version="1" description="Input A. Value of input port A on the meter."/>
+      <Bitmask byte="1" bit="6" unit="m3/h, kW, m3, kWh, MWh, Pulse Count" version="1" description="Input B. Value of input port B on the meter."/>
+    </MeterScalesType>
+
+    <!-- Heating/Cooling Meters -->
+    <MeterScalesType name="Сalorimeter">
+      <Bitmask byte="1" bit="0" unit="kWh, MWh, GJ, GCal" version="1" description="Heat Energy. Total accumulated energy used for heating."/>
+      <Bitmask byte="1" bit="1" unit="kWh, MWh, GJ, GCal" version="1" description="Cooling Energy. Total accumulated energy used for cooling."/>
+      <Bitmask byte="1" bit="2" unit="m3, ton" version="1" description="Volume 1. Volume counter 1 - forward flow."/>
+      <Bitmask byte="1" bit="3" unit="m3, ton" version="1" description="Volume 2. Volume counter 2 - return flow."/>
+      <Bitmask byte="1" bit="4" unit="°C, °F" version="1" description="Temperature 1 (Forward). Forward temperature."/>
+      <Bitmask byte="1" bit="5" unit="°C, °F" version="1" description="Temperature 2 (Return). Return temperature."/>
+      <Bitmask byte="1" bit="6" unit="°C, °F" version="1" description="Temperature 3. Temperature sensor 3."/>
+      <Bitmask byte="1" bit="7" unit="l/h, m3/h" version="1" description="Actual Flow (Volume 1). Current flow on volume 1."/>
+      <Bitmask byte="2" bit="0" unit="l/h, m3/h" version="1" description="Actual Flow (Volume 2). Current flow on volume 2."/>
+      <Bitmask byte="2" bit="1" unit="kW, MW" version="1" description="Actual Power. Current power."/>
+      <Bitmask byte="2" bit="2" unit="l/h, m3/h" version="1" description="Peak Flow. Peak flow recorded."/>
+      <Bitmask byte="2" bit="3" unit="kW, MW" version="1" description="Peak Power. Peak power recorded."/>
+      <Bitmask byte="2" bit="4" unit="m3/h, kW, m3, kWh, MWh, Pulse Count" version="1" description="Input A. Value of input port A on the meter."/>
+      <Bitmask byte="2" bit="5" unit="m3/h, kW, m3, kWh, MWh, Pulse Count" version="1" description="Input B. Value of input port B on the meter."/>
+      <Bitmask byte="2" bit="6" unit="h" version="1" description="Hour Counter. Hours in operation."/>
+      <Bitmask byte="2" bit="7" unit="m3 x °C" version="3" description="Volume based average temperature. Volumed based average temperature for inlet pipe"/>
+      <Bitmask byte="3" bit="0" unit="m3 x °C" version="3" description="Volume based average temperature. Volumed based average temperature for outlet pipe"/>
+      <Bitmask byte="3" bit="1" unit="kPa" version="3" description="Current Pressure. Current pressure value."/>
+    </MeterScalesType>
+
+    <!-- Electric Sub-meter -->
+    <MeterScalesType name="ElectricSubMeter">
+      <Bitmask byte="1" bit="0" unit="kWh" version="1" description="Accumulated"/>
+      <Bitmask byte="1" bit="1" unit="kVAh" version="1" description="Accumulated"/>
+      <Bitmask byte="1" bit="2" unit="W" version="1" description="Instant"/>
+      <Bitmask byte="1" bit="3" unit="Pulse Count" version="1" description="Accumulated"/>
+      <Bitmask byte="1" bit="4" unit="V" version="1" description="Instant"/>
+      <Bitmask byte="1" bit="5" unit="A" version="1" description="Instant"/>
+      <Bitmask byte="1" bit="6" unit="%" version="1" description="Power Factor. Power factor contains the ratio of real power to total power."/>
+    </MeterScalesType>
+  </MeterDatasetBitmask>
+
+  <!-- Pay meter -->
+  <PayMeters title="Pay meter (4 bits)">
+    <PayMeter name="Reserved" value="0x00" version="-"/>
+    <PayMeter name="Credit meter" value="0x01" version="1"/>
+    <PayMeter name="Prepayment meter" value="0x02" version="1"/>
+    <PayMeter name="Prepayment meter with debt recovery" value="0x03" version="1"/>
+    <PayMeter name="Reserved" value="0x04" version="-"/>
+    <PayMeter name="Reserved" value="0x05" version="-"/>
+    <PayMeter name="Reserved" value="0x06" version="-"/>
+    <PayMeter name="Reserved" value="0x07" version="-"/>
+  </PayMeters>
+
+  <!-- Operating Status -->
+  <OperatingStatus title="Operating Status (24 bits)">
+    <!-- Byte 1 -->
+    <Bitmask byte="1" bit="0" id="0x00" version="1" description="Disconnected. The meter has been disconnected."/>
+    <Bitmask byte="1" bit="1" id="0x01" version="1" description="Leak detection. A leak has been detected."/>
+    <Bitmask byte="1" bit="2" id="0x02" version="1" description="Power failure. All phases / meter without power."/>
+    <Bitmask byte="1" bit="3" id="0x03" version="1" description="Power failure - Phase 1. Power failure on phase 1 detected"/>
+    <Bitmask byte="1" bit="4" id="0x04" version="1" description="Power failure - Phase 2. Power failure on phase 2 detected"/>
+    <Bitmask byte="1" bit="5" id="0x05" version="1" description="Power failure - Phase 3. Power failure on phase 3 detected"/>
+    <Bitmask byte="1" bit="6" id="0x06" version="1" description="Voltage Quality. Voltage quality not within limits."/>
+    <Bitmask byte="1" bit="7" id="0x07" version="1" description="Tamper detection. Tamper switch has been activated."/>
+
+    <!-- Byte 2 -->
+    <Bitmask byte="2" bit="0" id="0x08" version="1" description="Magnetic tampering. Magnetic tempering detected."/>
+    <Bitmask byte="2" bit="1" id="0x09" version="1" description="Meter Clock Set. The clock has been set in the meter."/>
+    <Bitmask byte="2" bit="2" id="0x0A" version="1" description="Meter Clock Adjusted. The clock has been adjusted in the meter."/>
+    <Bitmask byte="2" bit="3" id="0x0B" version="1" description="Out of Credit. The meter is out of credit."/>
+    <Bitmask byte="2" bit="4" id="0x0C" version="1" description="Emergency credit. The meter is running on emergency credit."/>
+    <Bitmask byte="2" bit="5" id="0x0D" version="1" description="Transformer Ratio Changed. Current transformation ratio in the meter has changed"/>
+    <Bitmask byte="2" bit="6" id="0x0E" version="1" description="Temperature Sensor 1 - Out of range. Temperature sensor 1 is outside specification"/>
+    <Bitmask byte="2" bit="7" id="0x0F" version="1" description="Temperature Sensor 2 - Out of range. Temperature sensor 2 is outside specification"/>
+
+    <!-- Byte 3 -->
+    <Bitmask byte="3" bit="0" id="0x10" version="1" description="Temperature Sensor 3 - Out of range. Temperature sensor 3 is outside specification"/>
+    <Bitmask byte="3" bit="1" id="0x11" version="1" description="Bust detection Heat. Bust detected in the heating network causing potential flooding"/>
+    <Bitmask byte="3" bit="2" id="0x12" version="1" description="Error: check meter. Any other error condition not covered by other codes is detected"/>
+  </OperatingStatus>
+
+</Meter>
